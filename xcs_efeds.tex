@@ -27,6 +27,9 @@
 % installations will be fine) or prefer the old Computer Modern fonts, comment
 % out the following line
 \usepackage{newtxtext,newtxmath}
+% This line seems to make arXiv happy (https://tex.stackexchange.com/questions/564490/command-bbbk-already-defined-ol-bbbk-mathordamsb7c-when-i-try-t)
+\let\Bbbk\relax
+
 % Depending on your LaTeX fonts installation, you might get better results with one of these:
 %\usepackage{mathptmx}
 %\usepackage{txfonts}
@@ -104,7 +107,7 @@
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
 % \title[XCS: Demonstrating the fidelity of eFEDS data products when applied to clusters of galaxies]{The XMM Cluster Survey: Demonstrating the fidelity of eFEDS data products when applied to clusters of galaxies}
-\title[XCS: Demonstrating the fidelity of eFEDS data products when applied to clusters of galaxies]{The XMM Cluster Survey: An independent demonstration of the fidelity of the eFEDS galaxy cluster data products and implications for future studies}
+\title[XCS: Demonstrating the fidelity of eFEDS data products when applied to clusters of galaxies]{The {\em XMM} Cluster Survey: An independent demonstration of the fidelity of the eFEDS galaxy cluster data products and implications for future studies}
 
 \author[D. J. Turner et al.]
 {D. J. Turner$^{1}$\thanks{E-mail: david.turner@sussex.ac.uk (DJT)}\orcidA{},
@@ -128,7 +131,7 @@ $^{3}$Astrophysics Research Institute, Liverpool John Moores University, Liverpo
 $^{4}$Astrophysics Research Centre, University of KwaZulu-Natal, Westville Campus, Durban 4041, SA \\
 $^{5}$School of Mathematics, Statistics, and Computer Science, University of KwaZulu-Natal, Westville Campus, Durban 4041, SA \\
 $^{6}$Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, UK \\
-$^{7}$Department of Physics and Astronomy, Uppsala University, Box 516, SE- 751 20 Uppsala, Sweden\\
+$^{7}$Theoretical Astrophysics, Department of Physics and Astronomy, Uppsala University, Box 516, SE- 751 20 Uppsala, Sweden\\
 $^{8}$Department of Physics, Lancaster University, Lancaster LA1 4YB, UK \\
 $^{9}$Instituto de Astrof\'isica e Ci\^{e}ncias do Espa\c co, Universidade do Porto, CAUP, Rua das Estrelas, 4150-762 Porto, Portugal \\
 $^{10}$Departamento de F\'isica e Astronomia, Faculdade de Ci\^{e}ncias, Universidade do Porto, Rua do Campo Alegre, 687, 4169-007 Porto, Portugal \\
@@ -148,9 +151,9 @@ $^{10}$Departamento de F\'isica e Astronomia, Faculdade de Ci\^{e}ncias, Univers
 
 % Abstract of the paper
 \begin{abstract}
-We present the first comparison between properties of clusters of galaxies measured by the eROSITA Final Equatorial-Depth Survey (eFEDS) and the XMM-Newton X-ray telescope. We have compared, in an ensemble fashion, properties from the eFEDS X-ray catalogue (542 candidates) with those from the Ultimate {\bf X}MM e{\bf X}traga{\bf L}actic (or XXL) survey project (100 clusters). We find the distributions of redshift and $T_{\rm X}$ to be broadly similar between the two surveys, with a larger proportion of clusters above 4keV in the XXL-100-GC sample. However, the fractional $\Delta T_{\rm X}$ values are significantly larger in eFEDS compared to XXL.
-We construct a sample of 62 eFEDS X-ray cluster candidates that fall on an XMM observation, and inspect XMM, eROSITA, and SDSS images to remove candidates that should not be analysed. The final sample consists of 36 clusters, and we measure ${\sim}$24\% and ${\sim}$3\% contamination in the eFEDS X-ray and optically confirmed samples.
-We then make direct comparisons of properties measured by eFEDS and by XMM for individual clusters using tools developed for the XMM Cluster Survey (XCS). Of our sample, 8 clusters have a $T_{\rm X}$ measured by both eROSITA and XMM, and we find and quantify an offset between the two telescopes. We compare 29 X-ray luminosities ($L_{\rm X}$) measured by eFEDS and XCS and find them to be in excellent agreement.  We also construct $L_{\rm X}$ - $T_{\rm X}$ scaling relations based on eFEDS and XCS measurements, which are in tension. The tension is decreased when we measure a third scaling relation with calibrated XCS temperatures, but they are still not wholly consistent.
+We present the first comparison between properties of clusters of galaxies detected by the eROSITA Final Equatorial-Depth Survey (eFEDS) and the {\em XMM}-Newton X-ray telescope. We have compared, in an ensemble fashion, properties from the eFEDS X-ray catalogue (542 candidates) with those from the Ultimate {\bf X}MM e{\bf X}traga{\bf L}actic (or XXL) survey project (100 clusters). We find the distributions of redshift and $T_{\rm X}$ to be broadly similar between the two surveys, with a larger proportion of clusters above 4\,keV in the XXL-100-GC sample. However, the fractional $\Delta T_{\rm X}$ values are significantly larger in eFEDS compared to XXL.
+We construct a sample of 37 clusters that have eFEDS and {\em XMM} data, and we calculate minimum contamination fractions of ${\sim}$18\% and ${\sim}$1\% in the eFEDS X-ray and optically confirmed samples respectively, in agreement with eFEDS findings.
+We then make direct comparisons of properties measured by eFEDS and by {\em XMM} for individual clusters using tools developed for the {\em XMM} Cluster Survey (XCS). We compare 8 clusters that have $T_{\rm X}$ measured by both telescopes, and find that {\em XMM} temperatures are (on average) 25\% larger than the corresponding {\em eROSITA} temperatures. We compare 29 X-ray luminosities ($L_{\rm X}$) measured by eFEDS and XCS and find them to be in excellent agreement.  We also construct $L_{\rm X}$ - $T_{\rm X}$ scaling relations based on eFEDS and XCS measurements, which are in tension; the tension is decreased when we measure a third scaling relation with calibrated XCS temperatures.
 
 % An understanding of how measurements from the two telescopes differ is essential for the pursuit of joint analyses and direct comparisons, including those requiring scaling relations.
 % This does not necessarily imply that there is something wrong with the eROSITA calibration: a similar
@@ -160,7 +163,7 @@ We then make direct comparisons of properties measured by eFEDS and by XMM for i
 % Select between one and six entries from the list of approved keywords.
 % Don't make up new ones.
 \begin{keywords}
-keyword1 -- keyword2 -- keyword3
+X-rays: galaxies: clusters -- galaxies: clusters: intracluster medium -- techniques: spectroscopic -- instrumentation: miscellaneous
 \end{keywords}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -169,28 +172,44 @@ keyword1 -- keyword2 -- keyword3
 
 \section{Introduction}
 X-ray observations of clusters of galaxies provide insights into various aspects of astrophysics  \cite[e.g.,][]{,hitomi16turb,bhargava20,sanders21} and cosmology \cite[e.g.,][]{, vikhlinincosmo, otherxraycosmo}.
-Clusters are among the largest gravitationally bound structures in the Universe and consist of a dark matter halo, the intra-cluster medium, and the component galaxies. The intra-cluster medium (ICM) is a high-temperature, low-density, plasma that emits strongly in the X-ray band, with both continuum and emission line components.
+Clusters are among the largest gravitationally bound structures in the Universe and consist of a dark matter halo, the intra-cluster medium, and the component galaxies. The intra-cluster medium (ICM) is a high-temperature, low-density plasma that emits strongly in the X-ray band, with both continuum and emission line components.
 
 %, and we can extract information about its density, temperature, and composition through observations with X-ray telescopes.
 
 \begin{figure*}
     \centering
-    \includegraphics[width=1.0\textwidth]{images/efeds_xxl_z+t+t_frac.png}
-    \caption[]{Redshift, temperature, and fractional temperature error distributions of the eFEDS and XXL-100-GC samples. Both sample's redshifts come from a variety of sources, and temperatures are measured within 300kpc apertures centered on clusters. Redshift distribution is of the whole eFEDS sample. There are no clusters in common between the two samples.} 
+    \includegraphics[width=1.0\textwidth]{images/efeds_xxl_z+t+t_frac.pdf}
+    \caption[]{Redshift, temperature, and fractional temperature error distributions of the eFEDS and XXL-100-GC samples. Redshifts from both samples come from a variety of sources, and temperatures are measured within 300\,kpc apertures centered on clusters. There are no clusters in common between the two samples.} 
     \label{fig:xxlefeds}
 \end{figure*}
 
 %KR: not sure of the relevance of this paragraph
 %It is also possible to derive the mass of a galaxy cluster from its X-ray emission, either directly through the assumption of hydrostatic equilibrium and the analysis of temperature and density radial profiles \citep[e.g.,][]{vikhlinin06,martino14,giles17}, or through the use of a scaling relation that takes us from an easier to measure quantity (such as a mean X-ray temperature/luminosity, or an optical richness) to an inferred mass \citep[e.g.,][]{efedsmor,xxlmt,arnaudmt}. Due to the difficulty of directly measuring galaxy cluster masses (using any method), these mass-observable relations (MORs) are essential for the derivation of cosmological parameters from galaxy cluster samples \citep[e.g.][]{desy1clusters}.
 
-The eROSITA instrument mounted on the joint Russian-German Spectrum-Roentgen-Gamma (SRG) mission will contribute significantly to X-ray cluster astrophysics and cosmology. It's large field of view (${\sim}$1~deg), sensitivity (comparable to {\em XMM}), and energy resolution (also comparable to {\em XMM}) combine to make it a revolutionary new instrument. The final eROSITA All-Sky Survey (eRASS) is predicted to detect approximately 100,000 galaxy clusters above a mass of $5\times10^{13}$h$^{-1}$M$_{\odot}$. All of these clusters will be accompanied by an X-ray luminosity ($L_{\rm X}$) measurement, and roughly 20\% \citep[][]{efedsclustercat} of the observations will yield an X-ray temperature ($T_{\rm X}$) measurement. However, except for a handful of the highest flux clusters, it will not be  possible to measure masses, via the hydrostatic technique, directly from eRASS data. Therefore, in order to maximise the scientific yield of the survey, it will be necessary to supplement the eRASS cluster catalogue with mass measurements from the current generation of X-ray telescopes (i.e. {\em XMM}, {\em Chandra}). {\em eROSITA} will be used for pointed observations after the all sky survey is complete, as \cite{pointysanders} did during the commisioning phase.
-% detail not needed: with more than 50 soft band (0.5-2.0keV) counts up to $\rm{z}\sim1$ \citep{erass_numclusters}.
-The aim of this paper is to explore potential synergies between eRASS cluster catalogues and the data in the {\em XMM}-Newton public archives, calibration considerations required for such analyses, and to demonstrate the fidelity of eFEDS measurements. We wish to ascertain the level of contamination in the eFEDS cluster catalogue, verify the accuracy of $L_{\rm{X}}$ and $T_{\rm{X}}$ measurements, and compare the central coordinates of the detected clusters to those measured by the {\em XMM} Cluster Survey \citep[XCS, ][]{xcsfoundation}. As eFEDS is the same depth as the final eRASS, the accuracy of these measurements have implications for cosmological studies based on eRASS cluster detection (using weak lensing masses and X-ray luminosities for the mass observable relation). They will also impact studies based on optical or near-infrared detection (as luminosities can be used to explore scatter in the mass observable relations), and astrophysical studies of clusters luminosity-temperature relations to study the evolution of the intra-cluster medium. There is a known difference between the galaxy cluster temperatures measured by {\em XMM} and {\em Chandra} \citep[][]{xmmchandracal}. An understanding of whether there is a similar difference in {\em eROSITA} and {\em XMM} temperatures will be necessary before any joint analyses with data from the two telescopes is undertaken, and before scaling relations from one telescope can be safely used by another. For this we will make use of the recent release of the eROSITA Final Equatorial-Depth Survey \citep[eFEDS,][]{efedscat}. The eFEDS field covers approximately 140 square degrees of the equatorial ($-2.5^{\circ}<\delta<6.0^{\circ}$) sky. It intersects with several optical/near-IR photometry and/or spectroscopic surveys, including the Hyper Suprime-Cam Subaru Strategic Program \citep[HSC SSP, ][]{hscsurvey}, the Galaxy and Mass Assembly survey \citep[GAMA, ][]{gamasurvey}, and the Sloan Digital Sky Survey \citep[SDSS, ][]{sdss}.  Comparisons will be made to XCS measurements, as well as the XXL-100-GC catalogue \citep[][]{xxlgc100} to provide an indirect comparison to a similar X-ray survey.
+The eROSITA instrument mounted on the joint Russian-German Spectrum-Roentgen-Gamma \citep[SRG,][]{missionpaper} mission will contribute significantly to X-ray cluster astrophysics and cosmology. Its large field of view (${\sim}$1~deg), sensitivity (comparable to {\em XMM}), and energy resolution (also comparable to {\em XMM}) combine to make it a revolutionary new instrument. The final eROSITA All-Sky Survey (eRASS) is predicted to detect approximately 100,000 galaxy clusters above a mass of $5\times10^{13}$h$^{-1}$M$_{\odot}$ \citep[][]{erass_numclusters}. Most of these clusters will be accompanied by an X-ray luminosity ($L_{\rm X}$) measurement, and roughly 20\% \citep[][]{efedsclustercat} of the observations will yield an X-ray temperature ($T_{\rm X}$) measurement. However, apart from a handful of the highest flux clusters, it will not be possible to measure masses via the hydrostatic technique directly from eRASS data. Therefore, in order to maximise the scientific yield of the survey, it will be necessary to supplement the eRASS cluster catalogue with mass measurements from the current generation of X-ray telescopes (i.e. {\em XMM}, {\em Chandra}). {\em eROSITA} will be used for pointed observations after the all sky survey is complete, as \cite{pointysanders} did during the commissioning phase, in which case measuring hydrostatic masses may be possible.
 
-% something for discussion, not intro: Interestingly, studies of clusters observed with both {\em XMM} and {\em Chandra}, has shown a significant difference between values of T$_{\rm{x}}$ measured for the same galaxy cluster.  This has led to functions to calibrate this observed temperature difference \citep[][]{xmmchandracal}, and any analysis which uses both XMM and Chandra temperatures typically accounts for this \citep[][]{farahixmmchandra,mikgasxmmchandra}.  
+The aim of this paper is to explore potential synergies between eRASS cluster catalogues and the data in the {\em XMM}-Newton public archives, to probe calibration considerations required for such analyses, and to demonstrate the fidelity of eFEDS measurements. The {\em eROSITA} and {\em XMM} telescopes have different characteristics that allow them to complement one another, some of which (such as the effective area at different energies, and the background level) were explored by \cite{missionpaper}. Comparisons between the on-axis effective areas of the combined {\em XMM} cameras (PN, MOS1, and MOS2) and the combined {\em eROSITA} telescope modules show that the effective areas are effectively equal between ${\sim}$0.5-2.0~keV, though outside this range {\em XMM} has an advantage. Here {\em XMM} complements {\em eROSITA} in that it will observe more source emission at higher energies, which could improve constraints on spectroscopic measurements. The larger field of view of {\em eROSITA} ensures that its grasp (the product of effective area and observing area) is significantly greater than {\em XMM}'s below ${\sim}3.5$~keV, though above that energy {\em XMM}'s grasp is greater. Comparisons between the background levels of a subset of {\em eROSITA}'s telescope modules and the {\em XMM-Newton} cameras using a simultaneous observation of NLS1 1H0707-495 \citep[][]{simulback} revealed that, although the {\em eROSITA} background is higher than pre-launch predictions, it is generally lower than {\em XMM} and more temporally stable. Soft-proton flaring does not significantly impact {\em eROSITA}, giving it an advantage over {\em XMM} in this regard, and possibly allowing it to locate more low-flux sources (such as low surface-brightness galaxy clusters).
+
+In this work we will make use of the recent release of the {\em eROSITA} Final Equatorial-Depth Survey \citep[eFEDS,][]{efedscat}. The eFEDS field covers approximately 140 square degrees of the equatorial ($-2.5^{\circ}<\delta<6.0^{\circ}$) sky. It intersects with several optical/near-IR photometric and/or spectroscopic surveys, including the Hyper Suprime-Cam Subaru Strategic Program \citep[HSC SSP, ][]{hscsurvey}, the Galaxy and Mass Assembly survey \citep[GAMA, ][]{gamasurvey}, and the Sloan Digital Sky Survey \citep[SDSS, ][]{sdss}.  Comparisons will be made to XCS measurements, as well as the XXL-100-GC catalogue \citep[][]{xxlgc100} to provide an indirect comparison to a similar X-ray survey.
+
+We wish to ascertain the level of contamination in the eFEDS cluster catalogue, verify the accuracy of $L_{\rm{X}}$ and $T_{\rm{X}}$ measurements, and compare the central coordinates of the detected clusters to those measured by the {\em XMM} Cluster Survey \citep[XCS, ][]{xcsfoundation}. 
+As eFEDS is the same depth as the final eRASS, the accuracy of these measurements have implications for cosmological studies based on eRASS cluster detection (using weak lensing masses and X-ray luminosities for the mass observable relation). They will also impact studies based on optical or near-infrared detection (as luminosities can be used to explore scatter in the mass observable relations), and astrophysical studies of cluster luminosity-temperature relations to study the evolution of the intra-cluster medium. 
+
+There is a known difference between the galaxy cluster temperatures measured by {\em XMM} and {\em Chandra}. This difference has been quantified with functions to calibrate the temperatures of one telescope to another \citep[][]{xmmchandracal}, and any analysis which uses both {\em XMM} and {\em Chandra} temperatures typically accounts for this \citep[][]{farahixmmchandra,mikgasxmmchandra}. An understanding of whether there is a similar difference in {\em eROSITA} and {\em XMM} temperatures will be necessary before any joint analyses with data from the two telescopes is undertaken, and before scaling relations from one telescope can be safely used by another. 
+
+% Interestingly, studies of clusters observed with both {\em XMM} and {\em Chandra}, has shown a significant difference between values of T$_{\rm{x}}$ measured for the same galaxy cluster.  This has led to functions to calibrate this observed temperature difference \citep[][]{xmmchandracal}, and any analysis which uses both XMM and Chandra temperatures typically accounts for this \citep[][]{farahixmmchandra,mikgasxmmchandra}.  
 %not needed: The aim of this paper is to measure potential temperature differences between clusters detected in eFEDS, and those measure by {\em XMM}.
 
-In \S\ref{sec:efedsproperties} we explore the general properties of the eFEDS cluster catalogue and provide comparisons to a catalogue with similar properties. In \S\ref{sec:efedsxmm} we construct a cluster sample from eFEDS with corresponding observations from {\em XMM} and match to sources detected in the {\em XMM} Cluster Survey. \S\ref{sec:meascomp} compares temperatures and luminosities measured by eFEDS and {\em XMM}. Finally, in \S\ref{sec:discussion} and \S\ref{sec:summary}, we generate luminosity-temperature relations, discuss implications of our findings and how it can be improved, and compare eFEDS and XCS central positions, then provide a final summary.
+\begin{figure*}
+    \centering
+    \includegraphics[width=1.0\textwidth]{images/efeds_outline_xmm_pointings.pdf}
+    \caption[]{Footprint of eFEDS, given by the black solid line. Cluster candidates present in the eFEDS X-ray catalogue are highlighted by red diamonds. The grey circles highlight {\em XMM} observations, with a radius of 15\arcmin (the approximate radius of the {\em XMM} FoV).}
+    \label{fig:efedsxcsclusters}
+\end{figure*}
+
+In \S\ref{sec:efedsproperties} we explore the general properties of the eFEDS cluster catalogue and provide comparisons to a catalogue with similar properties. In \S\ref{sec:efedsxmm} we construct a cluster sample from the eFEDS catalogue with corresponding {\em XMM} observations, which includes a visual inspection of the X-ray data and SDSS images. \S\ref{sec:meascomp} compares temperatures and luminosities measured by eFEDS and {\em XMM}. Finally, in \S\ref{sec:discussion} and \S\ref{sec:summary}, we generate luminosity-temperature relations, discuss implications of our findings and how they can be improved, and compare eFEDS and XCS central positions, then provide a final summary.
+
+The analysis code, samples, and results from this work are available in a GitHub repository\footnote{\href{https://github.com/DavidT3/eFEDS-XCS-Paper}{Analysis code, samples, and results}}.
 
 Throughout this work we use a concordance $\Lambda$CDM cosmology where $\Omega_{\rm{M}}$=0.3, $\Omega_{\Lambda}$=0.7, and $\rm{H}_{0}$=70 km s$^{-1}$ Mpc$^{-1}$, consistent with the original eFEDS cluster analysis (and other XCS works).
 
@@ -198,153 +217,192 @@ Throughout this work we use a concordance $\Lambda$CDM cosmology where $\Omega_{
 \label{sec:efedsproperties}
 
 %KR: should this paragraph be in the into?
-The eFEDS cluster catalogue \citep{efedsclustercat} contains 542 candidates, 477 of which are optically confirmed \citep{efedsclusteropticalcat}. All 542 X-ray candidates are accompanied by $z$ values, and soft-band $L_{\rm X}$ values have been measured for 91\% of the X-ray sample. Average $T_{\rm X}$ values were obtained for 69 (300kpc) and 95 (500kpc) of the candidates, with the apertures centered on the eFEDS. Accounting for overlap, $T_{\rm X}$ values have been measured for 102 candidates, all of which are in the optically confirmed sample (i.e. 21\% of 477).
+The eFEDS cluster catalogue \citep{efedsclustercat} contains 542 candidates, 477 of which are considered to be optically confirmed \citep{efedsclusteropticalcat}. All 542 X-ray candidates are accompanied by $z$ values, and soft-band (0.5-2.0keV) $L_{\rm X}$ values have been measured for 91\% of the X-ray cluster candidate sample. Average $T_{\rm X}$ values were obtained for 69 (300\,kpc) and 95 (500\,kpc) of the candidates, with the apertures centered on the eFEDS coordinates. Accounting for overlap, $T_{\rm X}$ values have been measured for 102 candidates, all of which are in the optically confirmed sample (i.e. 21\% of 477).
 
-\begin{figure*}
-    \centering
-    \includegraphics[width=1.0\textwidth]{images/outline_withborder.png}
-    \caption[]{Footprint of eFEDS, given by the black solid line. Cluster candidates present in the eFEDS X-ray catalogue are highlighted by red diamonds. The grey circles highlight {\em XMM} observations, with a radius of 15\arcmin (the approximate radius of the {\em XMM} FoV).}
-    \label{fig:efedsxcsclusters}
-\end{figure*}
-
-The XXL survey \citep{xxlfoundation} covers ${\sim}50$~deg$^2$ of the sky (over two separate regions), the largest contiguous area covered by {\em XMM}, and are made up of 542 separate {\em XMM} observations with on-axis exposure times ranging from 10-20ks.  The contiguous nature of XXL makes it an ideal point of comparison to eFEDS.  Note however that the XXL and eFEDS surveys were taken in different parts of the sky, providing no clusters in common, therefore, a direct comparison of individual clusters is not possible.  Comparisons are limited here to ensemble distributions of the cluster samples.  We made use of the XXL-100-GC sample \citep{xxlgc100}, containing the 100 brightest galaxy clusters observed in XXL, and the 477 optically confirmed sample from eFEDS.  The flux limits of the eFEDS and XXL-100-GC cluster samples are also similar; ${\sim}10^{-14}\:\rm{erg}\:\rm{s}^{-1}\:\rm{cm}^{-2}$ for the whole eFEDS cluster candidate catalogue, $4.9\times10^{-14}\:\rm{erg}\:\rm{s}^{-1}\:\rm{cm}^{-2}$ for the eFEDS candidates with a measured temperature value in a 500kpc aperture, and $3\times10^{-14}\:\rm{erg}\:\rm{s}^{-1}\:\rm{cm}^{-2}$ for XXL-100-GC. These flux limits are calculated using slightly different methods, but even so their similarity justifies a comparison between these two samples.
-
+The XXL survey \citep{xxlfoundation} covers ${\sim}50$~deg$^2$ of the sky (over two separate regions), the largest contiguous area covered by {\em XMM}, and consists of 542 separate {\em XMM} observations with on-axis exposure times ranging from 10-20~ks.  The contiguous nature of XXL makes it ideal to compare to eFEDS.  Note however that eFEDS and the XXL survey were taken in different parts of the sky, providing no clusters in common, therefore a direct comparison of individual clusters is not possible. Comparisons are limited to ensemble distributions of the cluster samples.  We made use of the XXL-100-GC sample \citep{xxlgc100}, containing the 100 brightest galaxy clusters observed in XXL, and the sample of 477 optically confirmed eFEDS candidates.  The flux limits of the eFEDS and XXL-100-GC cluster samples are similar; ${\sim}10^{-14}\:\rm{erg}\:\rm{s}^{-1}\:\rm{cm}^{-2}$ for the whole eFEDS cluster candidate catalogue, rising to $4.9\times10^{-14}\:\rm{erg}\:\rm{s}^{-1}\:\rm{cm}^{-2}$ for the eFEDS candidates with a measured temperature value in a 500kpc aperture, and $3\times10^{-14}\:\rm{erg}\:\rm{s}^{-1}\:\rm{cm}^{-2}$ for XXL-100-GC. 
+%These flux limits are calculated using slightly different methods, but even so their similarity justifies a comparison between these two samples.
 %Due to the contiguous and uniform nature of the eFEDS observations, it is natural to compare the overall sample properties to the XXL-100-GC sample \citep{xxlgc100}, which contains the 100 brightest galaxy clusters observed in the XXL \citep{xxlfoundation} fields. Combined, these fields cover ${\sim}50$ deg$^2$, and are made up of 542 separate {\em XMM} observations with on-axis exposure times ranging from 10-20ks. The flux limits of the eFEDS and XXL-100-GC cluster samples are also similar; ${\sim}10^{-14}\:\rm{erg}\:\rm{s}^{-1}\:\rm{cm}^{-2}$ for the whole eFEDS cluster candidate catalogue, $4.9\times10^{-14}\:\rm{erg}\:\rm{s}^{-1}\:\rm{cm}^{-2}$ for the eFEDS candidates with a measured temperature value in a 500kpc aperture, and $3\times10^{-14}\:\rm{erg}\:\rm{s}^{-1}\:\rm{cm}^{-2}$ for XXL-100-GC. These flux limits are calculated using slightly different methods, but even so their similarity justifies a comparison between these two samples.
 
-Figure~\ref{fig:xxlefeds}a shows the redshift distributions of the clusters in the two samples (the eFEDS and XXL-100-GC distributions are shown in red and cyan respectively) to be very similar overall, but that XXL detects a higher proportion of clusters at low redshifts, and eFEDS has higher redshift candidates.  Next, we compare the respective temperature distributions.  Temperatures estimated for XXL clusters were measured within a 300kpc aperture \citep{xxllt}, as done for eFEDS clusters, making a direct comparison of the distributions valid. Figure~\ref{fig:xxlefeds}b plots the temperature distributions of the two samples, with the XXL temperature distribution containing a significantly higher proportion of temperatures above ${\sim}4\:\rm{keV}$. It is noted in \cite{efedsclustercat} that the ability to measure temperatures for hot clusters at $>$5~keV is limited due to the reduced sensitivity of eFEDS at energies $>$3 keV, this is a plausible reason of the increased number of higher temperature clusters in XXL compared to eFEDS ({\em eROSITA}'s effective area is ${\sim}$150~$\rm{cm}^2$ at 5~keV, compared to ${\sim}$900~$\rm{cm}^2$ for EPIC-PN). Furthermore, the temperature distribution could also be influenced by the selection functions of the two surveys, differing measurement methodology, or a systematic difference in temperatures measured by the {\em eROSITA} and {\em XMM} telescopes. Such a difference has been found between {\em XMM} and {\em Chandra}, and was recently calibrated by \cite{xmmchandracal}.
+Figure~\ref{fig:xxlefeds}a shows the redshift distributions of the clusters in the two samples (the eFEDS and XXL-100-GC distributions are shown in red and cyan respectively) to be very similar overall, but that XXL-100-GC detects a higher proportion of clusters at low redshifts, and eFEDS has higher redshift candidates.  Next, we compare the respective temperature distributions. Temperatures for the XXL-100-GC clusters were measured within a 300\,kpc aperture \citep{xxllt}, as were temperatures for eFEDS clusters, making a direct comparison of the distributions valid. Figure~\ref{fig:xxlefeds}b plots the temperature distributions of the two samples, with the XXL-100-GC temperature distribution containing a significantly higher proportion of temperatures above ${\sim}3.5\:\rm{keV}$. It is noted in \cite{efedsclustercat} that {\em eROSITA}'s ability to measure temperatures for hot clusters at $>$5~keV is limited due to the reduced sensitivity of {\em eROSITA} at energies $>$3~keV, a plausible reason for the increased number of higher temperature clusters in XXL-100-GC compared to eFEDS \citep[{\em eROSITA}'s effective area is ${\sim}$150~$\rm{cm}^2$ at 5~keV, compared to ${\sim}$900~$\rm{cm}^2$ for EPIC-PN. See Figure~9 in][for a detailed comparison]{missionpaper}; previous work by \cite{xcsmethod} has also shown that more counts are required to constrain temperatures to the same level for hotter galaxy clusters. Furthermore, the temperature distribution could also be influenced by the selection functions of the two surveys, differing measurement methodology, or a systematic difference in temperatures measured by the {\em eROSITA} and {\em XMM} telescopes. Such a difference has been found between {\em XMM} and {\em Chandra}, and was calibrated by \cite{xmmchandracal}. They showed that the difference increases with temperature, and that (at 10~keV) {\em XMM} EPIC measured temperatures were, on average, 23\% lower than {\em Chandra} ACIS temperatures.
 
-Finally we compare how well temperatures from the two samples are constrained, by comparing temperature uncertainties as a fraction of the absolute temperature value.  The temperature constraining power of XXL is shown to be greater than that of eFEDS in Figure~\ref{fig:xxlefeds}c, with the mean percentage uncertainties for XXL and eFEDS being 14\% and 25\% respectively. This fits with previous work by \cite{xcsmethod} that demonstrates ${\sim}2000$ background-subtracted soft-band (0.5-2.0keV) counts are required to achieve a fractional temperature uncertainty of ${\sim}0.1$. This would give the longer exposures of XXL an advantage over the eFEDS field (especially in the {\em XMM}-LSS fields which covers ${\sim}$11 deg$^{2}$ in the XXL-N field). XXL was a ground breaking survey, and maintains several key advantages in terms of temperature constraining power, but with the release of eFEDS it is no longer uniquely powerful.
+Finally we compare how well temperatures from the two samples are constrained, by comparing temperature uncertainties as a fraction of the absolute temperature value ($\Delta T_{\rm{X}}/T_{\rm{X}}$). Figure~\ref{fig:xxlefeds}c shows that, on average, XXL achieves better temperature constraints than eFEDS, with the mean percentage uncertainties for XXL and eFEDS being 14\% and 25\% respectively. This fits with previous work by \cite{xcsmethod} that demonstrates ${\sim}1000$ background-subtracted soft-band (0.5-2.0~keV) counts are required to achieve a fractional temperature uncertainty of ${\sim}0.1$ for a 3~keV cluster. This would give the longer exposures of XXL an advantage over the eFEDS field (especially in the deeper {\em XMM}-LSS fields, covering ${\sim}$11 deg$^{2}$ in the XXL-N field). 
+% XXL was a ground breaking survey, and maintains several key advantages in terms of temperature constraining power, but with the release of eFEDS it is no longer uniquely powerful.
 
-\section{{\em XMM} counterparts to \lowercase{e}FEDS clusters}
+\section{Understanding the \lowercase{e}FEDS contamination fraction}
+
+%{\em XMM} counterparts to \lowercase{e}FEDS clusters}
+
 \label{sec:efedsxmm}
 
 \begin{table*}
 \begin{center}
-\caption[]{{Summary of the samples defined in this work. N$_{\rm{cl}}$ is the number of clusters, N$_{\rm{T}_{\rm{eFEDS, 3(5)00kpc}}}$ the number with eFEDS T$_{\rm{XCS, 3(5)00kpc}}$ values, and N$_{\rm{T}_{\rm{XCS, 3(5)00kpc}}}$ the number with XCS T$_{\rm{3(5)00kpc}}$ values.}\label{tab:samples}}
+\caption[]{{Summary of the samples defined in this work. N$_{\rm{cl}}$ is the number of clusters, N$_{\rm{T}_{\rm{eFEDS, 500kpc}}}$ the number with eFEDS T$_{\rm{500kpc}}$ values, and N$_{\rm{T}_{\rm{XCS, 500kpc}}}$ the number with XCS T$_{\rm{500kpc}}$ values.}\label{tab:samples}}
 \vspace{1mm}
-\begin{tabular}{l|lccccc}
+\begin{tabular}{l|lccc}
 \hline
 \hline
-Sample Name & Description & N$_{\rm{cl}}$ & N$_{\rm{T}_{\rm{eFEDS, 300kpc}}}$ & N$_{\rm{T}_{\rm{eFEDS, 500kpc}}}$ & N$_{\rm{T}_{\rm{XCS, 300kpc}}}$ & N$_{\rm{T}_{\rm{XCS, 500kpc}}}$\\
+Sample Name & Description & N$_{\rm{cl}}$ & N$_{\rm{T}_{\rm{eFEDS, 500kpc}}}$ & N$_{\rm{T}_{\rm{XCS, 500kpc}}}$\\
 \hline
 \hline
-eFEDS & The full eFEDS cluster candidates catalogue & 542 & 69 & 95 & - & - \\
+eFEDS & The full eFEDS cluster candidates catalogue & 542 & 95 & - \\
 \hline
-eFEDS-{\em XMM} & eFEDS cluster candidates that fall on an XMM observation & 62 & 8 & 11 & - & - \\
+eFEDS-{\em XMM} & eFEDS cluster candidates that fall on an {\em XMM} observation & 62 & 11 & - \\
 \hline
-eFEDS-XCS & eFEDS-{\em XMM} candidates accepted after visual inspection & 36 & 6 & 8 & 23 & 29 \\
+eFEDS-XCS & eFEDS-{\em XMM} candidates available for analysis after inspection & 37 & 8 & 29 \\
 \hline
 \end{tabular}
 \end{center}
 \end{table*}
 
-In this section, we make use of archival {\em XMM} data that overlaps with the eFEDS footprint.  As such, we used the {\em XMM} Cluster Survey \citep[XCS,][]{xcsfoundation} cleaned data and source lists to: ({\em i}) determine which eFEDS cluster candidates fall on an {\em XMM} observation (Sect.~\ref{sec:eFEDS-XMM}); ({\em ii}) match the eFEDS candidates to an XCS extended source within these observations; ({\em iii}) verify that the candidates are clusters (utilising information from XCS, {\em eROSITA} and SDSS, Sect.~\ref{sec:efeds-varification}), providing examples of eFEDS candidates rejected from out analysis (Sect.~\ref{sec:examplerejects}); and ({\em iv}) understand the contamination fraction in the eFEDS sample (Sect.~\ref{sec:contamfrac}).
+In this section, we make use of archival {\em XMM} data that overlaps with the eFEDS footprint to make an estimate of the contamination fraction in the eFEDS cluster candidate list.  For this, we have used data products (images and source lists) from the {\em XMM} Cluster Survey \citep[XCS,][]{xcsfoundation}. We first determine which eFEDS X-ray cluster candidates fall within the active area of an {\em XMM} observation (Section~\ref{sec:eFEDS-XMM}). For these, we generate {\em eROSITA} cut-out images. We then compare, by eye, to the corresponding {\em XMM} cut-outs (Section~\ref{sec:efeds-verification}). We also compare to optical SDSS DR16 \citep[][]{dr16} images fetched from the SDSS cutout server\footnote{\href{https://skyserver.sdss.org/dr16/SkyserverWS/ImgCutout/getjpeg?ra=134.07450039749338&dec=-1.6358207558060298&width=1631&height=1631}{SDSS SkyServer Cutout}}. This allows us to categorise contaminating objects  (Section~\ref{sec:examplerejects}) and to estimate the overall contamination fraction in the eFEDS sample (Section~\ref{sec:contamfrac}).
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.95\columnwidth]{images/xmm_exposures.png}
-    \caption[]{Distribution of exposure times for eFEDS-{\em XMM} cluster candidates, measured at the eFEDS coordinates. Exposures taken from 0.5-2.0keV exposure maps, corrected for flaring and vignetting. Dashed line indicates the average vignetting corrected exposure of the eFEDS field reported by \cite{efedsclustercat}.}
+    \includegraphics[width=0.95\columnwidth]{images/xmm_exposures.pdf}
+    \caption[]{Distribution of exposure times for eFEDS-{\em XMM} cluster candidates, measured at the eFEDS coordinates. Exposures taken from 0.5-2.0~keV exposure maps, corrected for flaring and vignetting. Dashed line indicates the average vignetting corrected exposure of the eFEDS field reported by \cite{efedsclustercat}.}
     \label{fig:xmmexposure}
 \end{figure}
 
-\subsection{\lower{e}FEDS Cluster Candidates in the {\em XMM} Footprint}
+\subsection{eFEDS Cluster Candidates in the {\em XMM} Footprint}
 \label{sec:eFEDS-XMM}
 
-Figure~\ref{fig:efedsxcsclusters} shows the outline of the eFEDS footprint with eFEDS X-ray cluster candidates \citep{efedsclustercat} indicated by red diamonds. {\em XMM} observations taken within the eFEDS footprint are given by grey shaded circles, with a radius of 15$^{\prime}$ (the approximate field-of-view of {\em XMM}). Given there are 143 {\em XMM} observations, covering a total of {\color{red} ***} deg$^{2}$ of the eFEDS footprint, Figure~\ref{fig:efedsxcsclusters} highlights the extraordinary field of view of {\em eROSITA} and its utility as a survey instrument when compared to {\em XMM}. 
+Figure~\ref{fig:efedsxcsclusters} shows the outline of the eFEDS footprint with eFEDS X-ray cluster candidates \citep{efedsclustercat} indicated by red diamonds. {\em XMM} observations taken within the eFEDS footprint are indicated by grey shaded circles, with a radius of 15$^{\prime}$ (the approximate radius of the {\em XMM} field-of-view). There are a total of 143 {\em XMM} observations, covering ${\sim}$15\,deg$^{2}$ (11\%) of the sky within the eFEDS footprint, accounting for overlapping {\em XMM} observations.
+%, Figure~\ref{fig:efedsxcsclusters} highlights the extraordinary field of view of {\em eROSITA} and its utility as a survey instrument when compared to {\em XMM}. 
 %as well as showing us that the majority of eFEDS cluster candidates do not fall on an {\em XMM} observation.
 
-We used {\em XMM}: Generate and Analyse \citep[\texttt{XGA}\footnote{\href{https://github.com/DavidT3/XGA}{{\em XMM}: Generate and Analyse GitHub}}][]{xgapaper}; a new, open-source, X-ray astronomy analysis module developed by XCS, to determine which eFEDS cluster candidates fall within the footprint of an {\em XMM} observation. The 542 eFEDS clusters given in \cite{efedsclustercat} were used (instead of the 477 optically confirmed clusters), allowing for the study of non-confirmed clusters with potentially deeper {\em XMM} data to understand the eFEDS selection.
-
-An initial search is performed using the XCS archive of cleaned event lists for observations with an aimpoint that falls within 30\arcmin of a candidate (at the eFEDS coordinates). We then applied the requirement that 70\% of a 300kpc aperture (assuming the eFEDS redshift) falls on an {\em XMM} camera.  This search returned 62 eFEDS X-ray cluster candidates have been observed by {\em XMM}, and this sub-set is denoted the eFEDS-{\em XMM} sample.
+We used {\em XMM}: Generate and Analyse \citep[\texttt{XGA}\footnote{\href{https://github.com/DavidT3/XGA}{{\em XMM}: Generate and Analyse GitHub}}][]{xgapaper}; a new, open-source, X-ray astronomy analysis module developed by XCS, to determine which of the 542 eFEDS cluster candidates listed in \cite{efedsclustercat} have also been observed by {\em XMM}.
+% waffle The 542 eFEDS clusters given in \cite{efedsclustercat} were used (instead of the 477 optically confirmed clusters), allowing for the study of non-confirmed clusters with potentially deeper {\em XMM} data to understand the eFEDS selection.
+An initial search finds eFEDS candidates with central coordinates within 30\arcmin of an {\em XMM} observation aimpoint (this is larger than the {\em XMM} field of view to account for any cases of low-$z$ clusters with centroid offsets). We then refined the match so that at least 70\% of a 300\,kpc aperture (centred on the eFEDS coordinate and assuming the eFEDS redshift) coincides with an {\em XMM} observation. Sixty-two eFEDS candidates met these criteria, and this sub-set is denoted the eFEDS-{\em XMM} sample (see Table~\ref{tab:samples}).
 
 % Near the centre of Figure~\ref{fig:efedsxcsclusters} we can see a significant collection of {\em XMM} observations, the Herschel-ATLAS contiguous field followups. The majority of the {\em XMM}-HATLAS observations are shallow, with requested exposures of ${\sim}$2.5ks. While this makes it relatively comparable to the depth of the eFEDS (and eRASS) fields, it unfortunately means that it is likely to be difficult to measure well constrained temperatures for many of the clusters in this field.
 
-The distribution in Figure~\ref{fig:xmmexposure} demonstrates that the majority of eFEDS cluster candidates that fall on an XMM observation have a longer exposure time in {\em XMM} than the average 1.2ks vignetting-corrected exposure reported by \cite{efedsclustercat}. Though a direct exposure time comparison does not tell us everything about the relative usefulness of the {\em XMM} and {\em eROSITA} data (it is complicated by the relative effective area curves, as well as the different locations of the telescopes resulting in different levels of flaring and particle background), it does highlight that {\em XMM}-Newton observations (both new and archival) will continue to be important into the era of {\em eROSITA}, despite the impressive capabilities and field of view of the new telescope. 
+The distribution of {\em XMM} exposure times for the eFEDS-{\em XMM} sample is shown in Figure~\ref{fig:xmmexposure}. These are vignetting-corrected exposure times at the eFEDS coordinate (rather than at the respective observation aim-point). The typical eFEDS vignetting-corrected exposure (1.2~ks) is shown by the dashed red line for comparison.
+
+%waffle Though a direct exposure time comparison does not tell us everything about the relative usefulness of the {\em XMM} and {\em eROSITA} data (it is complicated by the relative effective area curves, as well as the different locations of the telescopes resulting in different levels of flaring and particle background), it does highlight that {\em XMM}-Newton observations (both new and archival) will continue to be important into the era of {\em eROSITA}, despite the impressive capabilities and field of view of the new telescope. 
 
 
 \subsection{Verifying the eFEDS-{\em XMM} Cluster Candidates}
-\label{sec:efeds-varification}
+\label{sec:efeds-verification}
 
 %Now that we have a sample of eFEDS cluster candidates that have also been observed by {\em XMM}, we need to verify that they are galaxy clusters, that the {\em XMM} data are of a high enough quality for us to analyse, and whether they have been detected by XCS. We do not necessarily expect that the entire eFEDS-{\em XMM} sample will have high enough quality data for us to confirm or deny an eFEDS candidate, or measure X-ray properties for them. 
 
 %XCS is a serendipitous survey utilising the entire archive of {\em XMM} observations to locate X-ray sources, with a focus on detecting galaxy clusters. Source detection is performed using a custom version of WAVDETECT \citep{wavdetect} called the XCS Automated Pipeline Algorithm \citep[XAPA,][]{xcsmethod}. XAPA is run on merged EPIC (PN+MOS1+MOS2) images, generated using events within an energy range of 0.5-2.0keV. This energy range is similar, but not identical, to the energy band in which eFEDS performed their source detection (0.2–2.3keV). Sources detected within separate {\em XMM} observations are then combined into an XCS Master Source List (XCS-MSL). As of mid 2020 this contains 327205 objects, of which 39890 (12\%) are classified as extended, and 332315 (88\%) are classified as point sources. 
 
-Using the 62 clusters in the eFEDS-{\em XMM} sample, we generate {\em eROSITA} and {\em XMM} images in order to assess the quality of the {\em XMM} observations, compare the observations of the {\em XMM} and {\em eROSITA} telescopes and visually confirm the presence of X-ray emission.  {\em XMM} is an ideal telescope with which to perform direct {\em eROSITA} image comparisons; the detector properties are very similar, but both the EPIC-PN and EPIC-MOS cameras have a slightly smaller PSF effect.  The \texttt{eSASS} \texttt{evtool} software was used to generate images of {\em XMM} fields (centered on the same coordinates), while using the same binning and image size to ensure a scaling of 4.35\arcsec per pixel; this allowed a valid side-by-side comparison. Images were created in the energy bands used for source detection by the respective surveys, corresponding to 0.5-2.0~keV and 0.2-2.3~keV for XCS and eFEDS respectively.  Next, we utilised the XCS Master Source List (XCS-MSL) to determine those eFEDS clusters that are detected on corresponding {\em XMM} observations (to aid in visual inspection of the eFEDS clusters).  Construction of the MSL is fully described in \cite{xcsgiles}, and is generated from source detection performed on {\em XMM} images using the XCS Automated Pipeline Algorithm \citep[XAPA,][]{xcsmethod}, a custom version of WAVDETECT \citep{wavdetect} developed within XCS.  Based upon this initial visual inspection, 9 eFEDS candidates were excluded from further analysis due to the corresponding poor {\em XMM} data quality (see Table~\ref{tab:xmmrejects} for details).    
+%waffle Using the 62 clusters in the eFEDS-{\em XMM} sample, we generate {\em eROSITA} and {\em XMM} images in order to assess the quality of the {\em XMM} observations, compare the observations of the {\em XMM} and {\em eROSITA} telescopes and visually confirm the presence of X-ray emission.  {\em XMM} is an ideal telescope with which to perform direct {\em eROSITA} image comparisons; the detector properties are very similar, but both the EPIC-PN and EPIC-MOS cameras have a slightly smaller PSF effect.  
 
-The remaining candidates (53 eFEDS-{\em XMM} candidates, after the 9 excluded above) were then visually inspected to confirm that these candidates are indeed galaxy clusters.  We made use of the SDSS (overlapping with the majority of eFEDS) in order to visually confirm the X-ray emission is associated with a cluster.  \cite{simerass} predicted that the contamination of the X-ray cluster candidate catalogue would be ${\sim}$20\%, and an eFEDS analysis by \cite{efedsclusteropticalcat} found a value in agreement with that prediction, hence the need for this visual inspection step.  The overall contamination of eFEDS is discussed further in Section~\ref{sec:contamfrac}.  We found 16 candidates where the ICM was significantly contamination, or they are spurious detections in eFEDS (i.e., a cluster was not responsible for the X-ray emission).  These 16 clusters were subsequently rejected from the final sample.  Notes on these 16 candidates are given Section~\ref{sec:notes} and listed in Table~\ref{tab:rejects}, with a detailed discussion of noteworthy candidates given in Section~\ref{sec:examplerejects}.  The rejection of these 26 candidates resulted in a final sample of 36 cluster candidates, with this sub-set denoted the eFEDS-XCS sample. 
+%eROSITA images? if XMM, then why mention only eSASS
 
-\subsubsection{Notes on rejected clusters}
-\label{sec:notes}
+To judge the quality of the eFEDS candidates in the 
+eFEDS-{\em XMM} sample, circular cut-out images, of radius 500\,kpc, were generated from the {\em eROSITA} eFEDS data and XCS processed {\em XMM} data. We select the {\em XMM} observation with the highest signal-to-noise within a 300~kpc aperture centered on the eFEDS candidate coordinate, and use the XCS generated PN+MOS1+MOS2 image \citep[][]{xcsgiles}. For the {\em eROSITA} cut-outs, the \texttt{eSASS}\footnote{\href{https://erosita.mpe.mpg.de/edr/DataAnalysis/}{Introduction to \texttt{eSASS}}} \texttt{evtool} software was used. 
 
-Here we provide notes on the 16 clusters rejected in Section~\ref{sec:efeds-varification}:
-\begin{itemize}
-\item[] \noindent 1644 -- X-ray emission appears coincident with two interacting active galaxies (see Sect.~\ref{sec:examplerejects}).
-\item[] \noindent 3334 -- No significant X-ray emission in eFEDS or XMM (see Sect.~\ref{sec:examplerejects}).
-\item[] \noindent 8602 -- eFEDS candidate split into two detections by eFEDS (see Sect~\ref{sec:examplerejects}).
-\item[] \noindent 1376 -- XMM data to shallow for confirmation.  There is a cluster there, but eFEDS coordinate is offset from the extended emission. 
-\item[] \noindent 5909 -- eFEDS candidate detected as a point source in XCS.  There are no galaxies coincident with the X-ray emission in SDSS.
-\item[] \noindent 8922 -- Spurious detection in the outskirts of a bright point source (see Sect.~\ref{sec:examplerejects}).
-\item[] \noindent 16370 -- eFEDS candidate coincident with a collection of galaxies in SDSS.  However, X-ray emission contaminated by low redshift point source (see Sect.~\ref{sec:examplerejects}).
-\item[] \noindent 9463 -- eFEDS candidate detected as two separate point sources in XCS using deeper {\em XMM} data.
-\item[] \noindent 13484 -- No obvious extended X-ray emission in eFEDS or {\em XMM}.  There are no evidence of cluster galaxies in SDSS at the eFEDS measured redshift (z=0.317).
-\item[] \noindent 13299 -- Spurious detection in the outskirts of the X-ray emission of a bright star.
-\item[] \noindent 150 -- X-ray extended emission dominated by a massive elliptical galaxy(see Sect.~\ref{sec:examplerejects}).
-\item[] \noindent 11754 -- Spurious detection in the outskirts of eFEDS 150.
-\item[] \noindent 3133 -- SDSS indicates the presence of a group of galaxies, however, the eFEDS emission is likely dominated by the central massive elliptical galaxy.
-\item[] \noindent 3008 -- SDSS indicates the presence of a group of galaxies, however, the eFEDS emission is likely dominated by the central massive elliptical galaxy.
-\item[] \noindent 5702 -- Deeper {\em XMM} observation reveals the X-ray emission is coming from a blue object in SDSS (which appears to be an AGN), XCS detects this as a point source (see Sect.~\ref{sec:examplerejects}).
-\item[] \noindent 6840 -- eFEDS candidate appears to be coincident with a blue source in SDSS (potentially an AGN).  XCS detects {\em XMM} emission as a point source, again, coincident with the SDSS source.
-\end{itemize}
+Both sets of images used a pixel size of 4.35\arcsec, but different energy ranges were used; 0.5-2.0~keV for {\em XMM} and 0.2-2.3~keV for {\em eROSITA}. These ranges reflect those used by the respective XCS and eFEDS source detection routines.  
 
-\subsubsection{Examples of contamination in the eFEDS X-ray cluster candidate catalogue}
-\label{sec:examplerejects}
+As shown in \cite{missionpaper}, the energy dependent effective area of {\em XMM} (assuming all three cameras are operating) is the same, or greater, than that of {\em eROSITA}. Therefore, we can expect most of the {\em XMM} cut-outs to have higher signal to noise than their eFEDS counterparts, even after accounting for the fact that the {\em XMM} background level is slightly higher than {\em eROSITA}'s. In 10 cases, however, we judged the {\em XMM} data to be inadequate for further analysis. This was either because the eFEDS candidate fell on the edge of the field of view and/or because the signal-to-noise was too low (see Table~\ref{tab:xmmrejects} for details). These 10 were excluded from further analysis, although it is noteworthy that in 5 cases, an obvious (by eye) extended source was visible in the corresponding {\em eROSITA} cut-out.
+
+%waffle; this allowed a valid side-by-side comparison. 
+%now implying both eROSITA and XMM
+%"detected" is not correct - classified as extended by XCS
+% this is not in the correct place Next, we utilised the XCS Master Source List (XCS-MSL) to determine those eFEDS cluster candidates that are detected in corresponding {\em XMM} observations.
+%waffle (to aid in visual inspection of the eFEDS clusters). %basic info about XCS should be in the introduction, plus by now we do not MSL - need to go in somewhere else
+% Construction of the MSL is fully described in \cite{xcsgiles}, and is generated from source detection performed on {\em XMM} images using the XCS Automated Pipeline Algorithm \citep[XAPA,][]{xcsmethod}, a custom version of WAVDETECT \citep{wavdetect} developed within XCS. 
+%what "initial visual inspection" - you've not mentioned doing any eye-balling yet. This rejection step is not explained properly, especially given the statement about > s:n above
+
+The remaining 52 eFEDS-{\em XMM} sources, were then visually inspected side-by-side judge the quality of the eFEDS candidates. To assist in this process, we also generated complementary optical images in the same region as the X-ray images (with 1000~kpc side length), using the SDSS DR16 public archive \citep[][]{dr16}.   
+% out of sequence, some of this should be in intro and some in discussion: \cite{simerass} predicted that the contamination of the X-ray cluster candidate catalogue would be ${\sim}$20\%, and an eFEDS analysis by \cite{efedsclusteropticalcat} found a value in agreement with that prediction, hence the need for this visual inspection step.  The overall contamination of eFEDS is discussed further in Section~\ref{sec:contamfrac}. 
+Thirty-seven eFEDS cluster candidates were confirmed by this visual inspection. The other 15 were classified as being contaminants and are listed in Table~\ref{tab:rejects}. There are four broad categories of contamination, as described below (Section~\ref{sec:examplerejects}).
+
+%waffle We found 16 candidates where the ICM was significantly contamination, or they are spurious detections in eFEDS (i.e., a cluster was not responsible for the X-ray emission).  These 16 clusters were subsequently rejected from the final sample.  Notes on these 16 candidates are given Section~\ref{sec:notes} and listed in Table~\ref{tab:rejects}, with a detailed discussion of noteworthy candidates given in Section~\ref{sec:examplerejects}.  The rejection of these 26 candidates resulted in a final sample of 36 cluster candidates, with this sub-set denoted the eFEDS-XCS sample. 
+
+% \subsubsection{Lose this section (sorry PG)}
+% \label{sec:notes}
+
+% {\color{red} From KR, I am assuming that the wording in this sub-section will be tidied up/homogenised and moved into the relevant appendix. I have added guessed classifications relating to section below, please check these. There seems to be an extra category needed. Where I have put BLEND it seems like it should be "misclassified [as extended] point source". If so, then we need another category, an example images in the next subsubsection}
+
+% Here we provide notes on the 16 clusters rejected in Section~\ref{sec:efeds-verification}:
+% \begin{itemize}
+% \item[] \noindent 1644 -- X-ray emission appears coincident with two interacting active galaxies (see Sect.~\ref{sec:examplerejects}). BLEND
+% \item[] \noindent 3334 -- No significant X-ray emission in eFEDS or XMM (see Sect.~\ref{sec:examplerejects}). SPURIOUS
+% \item[] \noindent 8602 -- eFEDS candidate split into two detections by eFEDS (see Sect~\ref{sec:examplerejects}). FRAGMENT
+% \item[] \noindent 1376 -- XMM data too shallow for confirmation.  There is a cluster there, but eFEDS coordinate is offset from the extended emission. XMMPOOR
+% \item[] \noindent 5909 -- eFEDS candidate detected as a point source in XCS.  There are no galaxies coincident with the X-ray emission in SDSS. BLEND
+% \item[] \noindent 8922 -- Spurious detection in the outskirts of a bright point source (see Sect.~\ref{sec:examplerejects}). SPURIOUS
+% \item[] \noindent 16370 -- eFEDS candidate coincident with a collection of galaxies in SDSS.  However, X-ray emission contaminated by low redshift point source (see Sect.~\ref{sec:examplerejects}). CONTAMINATED
+% \item[] \noindent 9463 -- eFEDS candidate detected as two separate point sources in XCS using deeper {\em XMM} data. BLEND
+% \item[] \noindent 13484 -- No obvious extended X-ray emission in eFEDS or {\em XMM}.  There are no evidence of cluster galaxies in SDSS at the eFEDS measured redshift (z=0.317). SPURIOUS
+% \item[] \noindent 13299 -- Spurious detection in the outskirts of the X-ray emission of a bright star. SPURIOUS
+% \item[] \noindent 150 -- X-ray extended emission dominated by a massive elliptical galaxy(see Sect.~\ref{sec:examplerejects}). CONTAMINATED
+% \item[] \noindent 11754 -- Spurious detection in the outskirts of eFEDS 150. SPURIOUS
+% \item[] \noindent 3133 -- SDSS indicates the presence of a group of galaxies, however, the eFEDS emission is likely dominated by the central massive elliptical galaxy. CONTAMINATED
+% \item[] \noindent 3008 -- SDSS indicates the presence of a group of galaxies, however, the eFEDS emission is likely dominated by the central massive elliptical galaxy. CONTAMINATED
+% \item[] \noindent 5702 -- Deeper {\em XMM} observation reveals the X-ray emission is coming from a blue object in SDSS (which appears to be an AGN), XCS detects this as a point source (see Sect.~\ref{sec:examplerejects}).BLEND
+% \item[] \noindent 6840 -- eFEDS candidate appears to be coincident with a blue source in SDSS (potentially an AGN).  XCS detects {\em XMM} emission as a point source, again, coincident with the SDSS source. BLEND
+% \end{itemize}
 
 \begin{figure*}
     \centering
-    \includegraphics[width=1\textwidth]{images/interactingagn.png}
-    \caption[]{eFEDS-{\em XMM} candidate (ID 1644) identified as a pair interacting galaxies with ongoing AGN activity (see Section~\ref{sec:examplerejects}). Left hand side is a combined PN+MOS1+MOS2 {\em XMM} image (ObsID 0822470101), centre is SDSS, right hand side is {\em eROSITA}.  Both {\em XMM} and {\em eROSITA} images are cutouts within a radius of 500~kpc (at the redshift provided by eFEDS).}
+    \includegraphics[width=1\textwidth]{images/interacting_agn.png}
+    \caption[]{eFEDS-{\em XMM} candidate (ID 1644) identified as a pair interacting galaxies with ongoing AGN activity (see Section~\ref{sec:examplerejects}). Left hand side is a combined PN+MOS1+MOS2 {\em XMM} image (ObsID 0822470101), centre is {\em eROSITA}, right hand side is SDSS. Both {\em XMM} and {\em eROSITA} images are cutouts within a radius of 600~kpc (at the redshift provided by eFEDS).}
     \label{fig:pairagn}
 \end{figure*}
 
-Here we provide detailed descriptions on a number of the candidates rejected in Section~\ref{sec:efeds-varification}, along with images from {\em XMM}, {\em SDSS} and {\em eROSITA}.  The first example (eFEDS ID 1644) is shown in Figure~\ref{fig:pairagn}, which is a pair of interacting galaxies with bright AGN \citep[as discussed in][]{agnpair}.  The X-ray emission is detected as a point source in the {\em XMM} image (Fig~\ref{fig:pairagn}, left) by XCS, coincident with the pair of galaxies in SDSS (Fig~\ref{fig:pairagn}, middle).  Another nearby point source is clearly visible in the {\em XMM} image (again detected as a point source by XCS).  The shallower detected in eFEDS (Fig~~\ref{fig:pairagn}, right) has potentially blended these two sources leading to the detection of a single extended source by the eROSITA source finder.
+\subsection{Categories of contaminating objects in the eFEDS X-ray cluster candidate catalogue}
+\label{sec:examplerejects}
+Here we discuss categories for the different types of contaminating object that we discovered in the eFEDS X-ray cluster candidate catalogue. The figures that we use to illustrate these examples are not necessarily on the same scale, or centered on the same position, as those we used for visual inspection.
 
-In Figure~\ref{fig:brightoutskirts} we found that eFEDS (ID 8922) has spuriously identified a cluster candidate in the outskirts of a bright point source (a behaviour that is also seen in two other eFEDS-{\em XMM} candidates).  The point source is clearly detected in {\em XMM} (Fig~\ref{fig:brightoutskirts}, left) and coincident with a spiral galaxy with a central AGN in SDSS (Fig~\ref{fig:brightoutskirts}, middle).  The source is identified as an AGN in the Million Quasar catalog \citep{milliquas}.  The coordinates of the eFEDS candidate (given by the white cross-hairs) is clearly in the outskirts of the X-ray emission from the point source in eFEDS (Fig~\ref{fig:brightoutskirts}, right).  The smaller PSF of {\em XMM} shows little extended emission at these coordinates, and we conclude this is a spurious detection in eFEDS.
+%waffle/repetition Here we provide detailed descriptions on a number of the candidates rejected in Section~\ref{sec:efeds-verification}, along with images from {\em XMM}, {\em SDSS} and {\em eROSITA}.  
+
+\subsubsection{Blended sources}
+
+An example of this is eFEDS ID 1644, which is shown in Figure~\ref{fig:pairagn}. In this candidate, the two point sources in the {\em XMM} cut-out appear as a single object in the {\em eROSITA} image. The dominant X-ray source is discussed in \cite{agnpair}. It is the result of AGN activity in a pair of interacting galaxies. The two galaxies can be seen in the corresponding SDSS image Figure~\ref{fig:pairagn} (right). 
+
+\subsubsection{Spurious sources}
+\label{subsec:spurious}
+An example of this is shown in Figure~\ref{fig:blanksky}. There does not appear to be a source at the eFEDS coordinates (extended or otherwise) in either the {\em XMM} or {\em eROSITA} image. We note that the redshift provided by the eFEDS cluster catalogue for this candidate (eFEDS ID 3334) is very low ($z=0.087$) and so the associated galaxies should be obvious in the corresponding SDSS image (but none are). 
+
+Another example is eFEDS ID 8922, which is shown in Figure~\ref{fig:brightoutskirts}; this cutout is not centered on the spurious eFEDS cluster candidate, but on the bright source that causes it. The eFEDS candidate location (at the cross hairs) is in the outskirts of a bright source (eFEDS ID 3), and not coincident with any distinct source in either the {\em eROSITA} or {\em XMM} image. The dominant X-ray source is identified as an AGN in the Million Quasar catalogue \citep{milliquas} located in a spiral galaxy visible in the corresponding SDSS image in Figure~\ref{fig:brightoutskirts} (right). It is also present in the eFEDS AGN catalogue \citep[][]{efedsagn}.
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=1\textwidth]{images/blank_lowz.png}
+    \caption[]{An eFEDS-{\em XMM} cluster candidate (eFEDS ID 3334) without an obvious corresponding source of emission. The cross-hair indicates the eFEDS position. X-ray images have a 500~kpc aperture, and the SDSS image has a smaller 250~kpc half-width. Left image is {\em XMM}, centre is {\em eROSITA}, right is SDSS.}
+    \label{fig:blanksky}
+\end{figure*}
+
+\subsubsection{Fragmented sources}
+\label{subsubsec:frag}
+
+An example of this is shown in Figure~\ref{fig:splitcluster}. The white cross-hair indicating the position of one eFEDS candidate (eFEDS ID 8602), and the white diamond another (eFEDS ID 1023). The two candidates have almost identical redshifts ($z=0.196$ and $z=0.197$ respectively). Luminosity measurements for both, and a temperature estimate for eFEDS ID 1023, are given in \cite{efedsclustercat}. We discuss this system further in Appendix~\ref{app:split_cluster}, but do not allow it contribute to our temperature and luminosity comparisons, or our luminosity-temperature relations.
+
+% waffle: Unfortunately we are forced to exclude both candidates, even though the second is one of the few candidates that has an eFEDS temperature measurement and high quality {\em XMM} data; this is because we expect that part of the cluster will have been excluded in the eFEDS analysis, and as such the temperature and luminosity are invalid. 
 
 \begin{figure*}
     \centering
     \includegraphics[width=1\textwidth]{images/outskirt_cands.png}
-    \caption[]{Spurious eFEDS-{\em XMM} cluster candidate (ID 8922) found in the outskirts of a bright point source.  The X-ray emission is dominated by a low redshift AGN (see Section~\ref{sec:examplerejects}). Left hand side is {\em XMM}, middle is SDSS, and right is {\em eROSITA}.}
+    \caption[]{Spurious eFEDS-{\em XMM} cluster candidate (ID 8922) found in the outskirts of a bright point source.  The X-ray emission is dominated by a low redshift AGN (see Section~\ref{sec:examplerejects}). Left hand side is {\em XMM}, centre is {\em eROSITA} right is SDSS. Dashed circle indicates another eFEDS candidate (ID 16370).}
     \label{fig:brightoutskirts}
 \end{figure*}
 
-Another eFEDS-{\em XMM} candidate (ID 16370) is also present in Figure~\ref{fig:brightoutskirts}.  The eFEDS candidate is highlighted by the white circle.  While no obvious X-ray emission is present, the coordinates coincide with a collection of red galaxies in SDSS at a photo-z of z=0.44 (matching the eFEDS catalog).  Due to the proximity of the eFEDS candidate to the bright point source, we exclude this cluster from our analyses due to contamination of any X-ray emission from the cluster due to the foreground AGN.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=1\columnwidth]{images/split_cluster.png}
-    \caption[]{Example of an eFEDS cluster candidate, split into two sources by the eFEDS cluster finder. Cross-hairs indicate one candidate (eFEDS J085022.3+001607), and the diamond indicates the other (eFEDS J085027.9+001503). Left image is {\em XMM}, right is {\em eROSITA}.}
-    \label{fig:splitcluster}
-\end{figure}
-
-During our visual inspection of the eFEDS-{\em XMM} candidates, we found one instance where the detection of a high signal-to-noise cluster candidate in eFEDS has been split into two separate entries in the X-ray cluster catalogue. Figure~\ref{fig:splitcluster} shows {\em XMM} and {\em eROSITA} images of the cluster, with the white cross-hair indicating the position of the first cluster fragment (eFEDS J085022.3+001607), and the white diamond the other fragment (eFEDS J085027.9+001503). The two eFEDS-XMM candidates have almost identical eFEDS redshifts (0.196 and 0.197 respectively), both have measured eFEDS luminosities, however, only eFEDS J085027.9+001503 has a temperature measurement. Unfortunately we are forced to exclude both candidates, even though the second is one of the few candidates that has an eFEDS temperature measurement and high quality {\em XMM} data; this is because we expect that part of the cluster will have been excluded in the eFEDS analysis, and as such the temperature and luminosity are invalid. 
-
 \begin{figure*}
     \centering
-    \includegraphics[width=1\textwidth]{images/blanklowz_sdss.png}
-    \caption[]{An eFEDS-{\em XMM} cluster candidate (eFEDS J084201.8+005942) without an obvious corresponding source of emission. The cross-hair indicates the eFEDS position, with a 3\arcmin aperture. Left image is {\em XMM}, middle is SDSS, right is {\em eROSITA}.}
-    \label{fig:blanksky}
+    \includegraphics[width=1\textwidth]{images/split_cluster.png}
+    \caption[]{Example of an eFEDS cluster candidate, split into two sources by the eFEDS cluster finder. Cross-hairs indicate one candidate (eFEDS ID 8602), and the diamond indicates the other (eFEDS ID 1023). Left image is {\em XMM}, centre is {\em eROSITA}, right is SDSS.}
+    \label{fig:splitcluster}
 \end{figure*}
-
-{\bf We also observed cases where no X-ray source is present in {\em XMM} or {\em eROSITA} images. Figure~\ref{fig:blanksky} is an example where we cannot locate a source at the eFEDS coordinates (extended or otherwise) in the image taken by either X-ray telescope (with the {\em XMM} observation being deeper than eFEDS), and as such it is hard to know what the eFEDS source finder detected here. The redshift provided by the eFEDS cluster catalogue for this candidate (eFEDS J084201.8+005942) is very low (0.087).  Inspection using SDSS does not indicate any overdensity of galaxies at the eFEDS coordinates.  Therefore, the eFEDS detection remains somewhat of a mystery.} \textcolor{red}{\bf Swap this with discussion of 5702.  X-ray emission coming from AGN, present in Milliquas}  
 
 \begin{figure*}
     \centering
     \includegraphics[width=1\textwidth]{images/elliptical_xray.png}
-    \caption[]{An eFEDS-{\em XMM} cluster candidate (eFEDS J092002.2+010220) that appears to be a low-redshift, bright, X-ray emitting elliptical galaxy. Aperture applied to the X-ray data is centered on eFEDS coordinates, has a radius of 3\arcmin, and SDSS image is the same size. Left image is {\em XMM}, middle is SDSS, right is {\em eROSITA}.}
+    \caption[]{An eFEDS-{\em XMM} cluster candidate (eFEDS ID 150) that appears to be a low-redshift, bright, X-ray emitting elliptical galaxy. Aperture applied to the X-ray data is centered on eFEDS coordinates, has a radius of 50~kpc, and SDSS image is the same size. Left image is {\em XMM}, centre is {\em eROSITA}, right is SDSS.}
     \label{fig:ellipticalxray}
 \end{figure*}
 
-Finally, we encountered two cases where X-ray emission attributed to a galaxy cluster was significantly contaminated by an X-ray bright elliptical galaxy. We consider these sources (eFEDS J092002.2+010220 and eFEDS J092235.9-002443) to be low redshift groups.  Figure~\ref{fig:ellipticalxray} shows the {\em XMM} and {\em eROSITA} images related to the first of these candidates, with the addition of an SDSS image for further context. The extended X-ray emission appears to dominated by the galaxy, rather than any significant emission from an intra-group medium.
+\subsubsection{Contaminated sources}
+\label{subsubsec:contamsrc}
+
+In these cases there is evidence, from the SDSS data, for a physical association of galaxies, but it is likely that the emission from the intra-cluster/group medium is significantly contaminated. One example (eFEDS ID 150) is shown in Figure~\ref{fig:ellipticalxray}, and another is eFEDS ID 3133, both of which are contaminated by a central massive galaxy.
+
+An example of a different type of contaminated emission is present in Figure~\ref{fig:brightoutskirts} (eFEDS ID 16370). The eFEDS candidate is highlighted by the white circle.  While no obvious X-ray emission is present, the coordinates coincide with a collection of red galaxies in SDSS at a photo-$z$ of $z=0.44$ (matching the eFEDS catalogued $z$).  Due to the proximity of the eFEDS candidate to the bright AGN (as discussed in Section~\ref{subsec:spurious}), we exclude this cluster from our analyses.
+%Waffle: Figure~\ref{fig:ellipticalxray} shows the {\em XMM} and {\em eROSITA} images related to the first of these candidates, with the addition of an SDSS image for further context. The extended X-ray emission appears to dominated by the galaxy, rather than any significant emission from an intra-group medium.
 
 %\subsection{Constructing the \lower{e}FEDS-XCS cluster sample}
 
@@ -356,58 +414,72 @@ Finally, we encountered two cases where X-ray emission attributed to a galaxy cl
 
 %The cleaned sample is henceforth called eFEDS-XCS. 
 
-\subsection{Understanding the contamination fraction in eFEDS}
+\subsection{The eFEDS contamination fraction}
 \label{sec:contamfrac}
 
-As discussed in Section~\ref{sec:efeds-varification}, 16 of the 62 eFEDS-{\em XMM} sample were rejected due to contamination/spurious detections.  It is predicted that the eRASS would suffer from a contamination fraction of $\sim$20\% \citep{simerass}, and confirmed in eFEDS by \cite{efedsclusteropticalcat}.  Based upon our visual inspection process, the rejection of 16 candidates (of the initial 62 eFEDS-{\em XMM} sample), leads to a contamination fraction of $\sim$24\%, in line with the predicted and measured eFEDS value.  Note that 9 other candidates were excluded in Section~\ref{sec:efeds-varification} due to the quality of the {\em XMM} data.  These are not included as contamination, and for the purposes of estimating contamination fraction, remain in the initial 62 eFEDS-{\em XMM} sample (they are not however used for further analysis).
+As discussed in Section~\ref{sec:efeds-verification}, 15 of the 62 candidates (Table~\ref{tab:rejects}) in the eFEDS-{\em XMM} sample were not included in the eFEDS-XCS sample due to our visual inspection classifying them as one of the contaminant types discusses in Section~\ref{sec:examplerejects}. One of the categories is `contaminated sources' (Section~\ref{subsubsec:contamsrc}), where there appears to be an association of galaxies but the X-ray emission is significantly contaminated. Sources not included in eFEDS-XCS for this reason (of which there are 4) should not be included in the contamination fraction calculation, as they do appear to be galaxy clusters. For 10 candidates (Table~\ref{tab:xmmrejects}) the low quality {\em XMM} data meant we were not able to confirm or deny the presence of a galaxy cluster, and as such we find that the minimum contamination fraction of the eFEDS-{\em XMM} sample is ${\sim}$18\%.
 
-While the contamination fraction above is in line with predictions for eRASS, of particular interest is whether any of our rejected clusters appear in the optically confirmed eFEDS sample.  We use the 477 cluster candidates \cite{efedsclusteropticalcat} defined as optically confirmed, to assess whether any of the rejected 16 eFEDS-{\em XMM} candidates appear in the optically confirmed sample.  We find that 9 of the 16 eFEDS-{\em XMM} candidates are present in the optically confirmed catalogue (these are highlighted in Table~\ref{tab:rejects}).  This includes both eFEDS J085027.9+001503 and eFEDS J085022.3+001607, the two pieces of the fragmented cluster detection shown in Figure~\ref{fig:splitcluster}.  If this behaviour of fragmenting a cluster into multiple sources exists elsewhere in the eFEDS X-ray cluster candidate catalogue, then we would expect to see a similar behaviour where multiple fragments are accepted into the optically confirmed sample as separate clusters. This is a consequence of directing a cluster confirmation tool such as the Multi-component Matched Filter Cluster Confirmation Tool \citep[MCMF,][]{MCMF} to a particular, X-ray defined, position, as the fragments are so close together (and both fragment positions fall within the cluster) that it will be probing essentially the same galaxy population. The alternative approach, however, is to match between cluster candidates from X-ray source detection and optical cluster catalogues from cluster finders such as the red-sequence Matched-filter Probabilistic Percolation \citep[redMaPPer,][]{redMaPPer} algorithm, the Cluster finding algorithm based on Multi-band Identification of Red-sequence gAlaxies \citep[CAMIRA,][]{camira}, or the Wavelet Z Photometric \citep[WaZP,][]{WaZP} cluster finder, which has its own difficulties. The advantage of matching between catalogues in this particular instance would be the simple diagnostic test of checking whether one optical cluster candidate has multiple X-ray matches, though a similar test should be possible with the cluster confirmation method. 
+Simulations performed in preparation for the all-sky survey predicted that the eRASS X-ray cluster candidate sample would have a contamination fraction of $\sim$20\% \citep{simerass}. The eFEDS search for optical counterparts to X-ray cluster candidates \citep[][]{efedsclusteropticalcat} measured a 17$\pm 3$\% contamination fraction, consistent with the simulation predictions and with our measured value. Our sample of eFEDS cluster candidates is relatively small compared to the full eFEDS X-ray cluster candidate catalogue, and as such may suffer from small number statistics. Also, many of the {\em XMM} observations within the eFEDS field are targeted on specific objects rather than being part of a contiguous survey region, and as such may introduce a selection bias in terms of calculating the contamination fraction for a specific type of object.
 
-If we discount the fragmented cluster, we find that the optically confirmed eFEDS cluster sample has a minimal level of contamination, at a level of ${\sim}$3\%. We also find that one of the candidates (eFEDS J090553.6+002244) that we accept into the eFEDS-XCS sample does not appear in the optically confirmed sample, though all other eFEDS-XCS candidates do. 
+We also investigate whether any of the 11 (again removing the 4 clusters with contaminated X-ray emission) cluster candidates that we classed as contaminating objects (Table~\ref{tab:rejects}) are present in the sample of 477 candidates that \cite{efedsclusteropticalcat} consider to be optically confirmed. We find that 5 of the 11 are present in the optically confirmed catalogue, which indicates a minimum contamination fraction of ${\sim}1\%$. This is consistent with (but lower) than the eFEDS optically confirmed catalogue residual contamination fraction ($6\pm 3$\%) reported by \cite{efedsclusteropticalcat}. All of the four apparent clusters that have contaminated X-ray emission are present in the optically confirmed catalogue.
+
+We also find that one of the candidates (eFEDS ID 5170) that we accept into the eFEDS-XCS sample does not appear in the eFEDS optically confirmed sample, though all other eFEDS-XCS clusters do. 
+
+% This includes both eFEDS J085027.9+001503 and eFEDS J085022.3+001607, the two pieces of the fragmented cluster detection shown in Figure~\ref{fig:splitcluster}.  If this behaviour of fragmenting a cluster into multiple sources exists elsewhere in the eFEDS X-ray cluster candidate catalogue, then we would expect to see a similar behaviour where multiple fragments are accepted into the optically confirmed sample as separate clusters. 
+% This is a consequence of directing a cluster confirmation tool such as the Multi-component Matched Filter Cluster Confirmation Tool \citep[MCMF,][]{MCMF} to a particular, X-ray defined, position, as the fragments are so close together (and both fragment positions fall within the cluster) that it will be probing essentially the same galaxy population. The alternative approach, however, is to match between cluster candidates from X-ray source detection and optical cluster catalogues from cluster finders such as the red-sequence Matched-filter Probabilistic Percolation \citep[redMaPPer,][]{redMaPPer} algorithm, the Cluster finding algorithm based on Multi-band Identification of Red-sequence gAlaxies \citep[CAMIRA,][]{camira}, or the Wavelet Z Photometric \citep[WaZP,][]{WaZP} cluster finder, which has its own difficulties. The advantage of matching between catalogues in this particular instance would be the simple diagnostic test of checking whether one optical cluster candidate has multiple X-ray matches, though a similar test should be possible with the cluster confirmation method. 
+
+% If we discount the fragmented cluster, we find that the optically confirmed eFEDS cluster sample has a minimal level of contamination, at a level of ${\sim}$3\%.
 
 \section{Comparisons of cluster properties measured by \lowercase{e}FEDS and XCS}
 \label{sec:meascomp}
 
+We use the \texttt{XGA} XSPEC \citep[][]{xspec} interface to measure spectroscopic properties of those clusters that have high enough quality {\em XMM} data, and compare values to those presented in the eFEDS data release. Note that we do not re-analyse the eFEDS data, but compare to the measurements given by \cite{efedsclustercat}. We use \texttt{XGA} v0.2.1, SAS v17.0.0, and XSPEC v12.10.1.
+
 \begin{figure}
     \centering
-    \includegraphics[width=0.95\columnwidth]{images/efeds_xcs_l500cal.png}
-    \caption[]{Comparison of unabsorbed cluster luminosities within a 500kpc aperture, in the 0.5-2.0keV energy band, centered on eFEDS coordinates. Pale blue line indicates best fit power-law, with 68\% confidence levels given by shaded region. Grey line indicates a power-law fit with slope set to 1 (with 68\% confidence levels given by grey shaded region).}
+    \includegraphics[width=0.95\columnwidth]{images/efeds_xcs_l500cal.pdf}
+    \caption[]{Comparison of unabsorbed cluster luminosities within a 500kpc aperture, in the 0.5-2.0keV energy band, centered on eFEDS coordinates. Pale blue line indicates best fit power-law, with 68\% confidence levels given by shaded region. Grey line indicates a power-law fit with slope set to 1 (with 68\% confidence levels given by grey shaded region). Cyan diamond is for the cluster discussed in Appendix~\ref{app:split_cluster}.}
     \label{fig:l500kpccomp}
 \end{figure}
 
-We use the \texttt{XGA} XSPEC \citep[][]{xspec} interface to measure spectroscopic properties of those clusters that have high enough quality data, and compare those values to those presented in the eFEDS data release. Note that we do not re-analyse the eFEDS data and compare purely to the measurements given by \cite{efedsclustercat}. We use \texttt{XGA} v0.2, SAS v17.0.0, and XSPEC v12.10.1.
-
-\subsection{Fitting Procedure}
-\label{subsec:fitproc}
-
-Cluster spectra are extracted within a 500kpc fixed aperture (as the eFEDS catalogue contains a greater number of 500 kpc temperatures than 300 kpc) and centered on the eFEDS position.  Corresponding backgrounds are extracted within 1000-1500~kpc annuli. Non-cluster sources in both the 500kpc apertures and background regions are identified using the XCS region files, and their corresponding events are removed during spectrum generation.  We fit absorbed \cite[with tbabs, ][]{tbabs} plasma emission models \citep[APEC, ][]{apec} to the spectra; these models are standard for XCS analyses, but are also the same as those used in the eFEDS spectroscopic analysis. To maximise the similarity of our analysis to eFEDS we opt to use the abundance tables published by \cite{aspl} when performing our spectral fits. The abundance parameter of the APEC model in all cases is set to 0.3Z$_{\odot}$ and frozen, the nH parameter of the tbabs model is set from the full-sky HI survey by the \cite{nh} (using the HEASoft \texttt{nh} tool) and frozen. The redshift parameter is set to the eFEDS catalogue value and frozen.
-
-% All available observations and cameras are allowed to contribute to the fit of a given galaxy cluster, provided that they meet certain conditions. First, we require every spectrum to have a minimum of 10 noticed channels, ensuring no spectra have been re-binned to have only one or two channels. Each of these spectra are first fit independently, with the temperature and normalisation parameters allowed to vary.  If the measured temperature is $\leq$0.01keV, $>$20keV, or the temperature uncertainty is $>$ 15keV, then the corresponding spectrum will be rejected and not included in the final fit. When a set of acceptable spectra has been compiled, a final simultaneous fit is performed using only those spectra. An absorbed plasma emission model is created for each spectrum, then the temperature and normalisation parameters of all models are linked.  For this fit we add a simple multiplicative constant, to account for the differences in normalisation from different observations and still allow us to retrieve a single normalisation value at the end (as it has a physical meaning). The constant of the first model is set to 1 and frozen, and in all other models is allowed to vary freely. Temperature values (after XSPEC has run a suitable error calculation step), as well as the un-absorbed luminosity in energy bands of our choice, are then determined from this final fit.
-
-Observations and cameras that meet quality requirements contribute to the fit of a given galaxy cluster. Each spectrum is first fit independently, with the temperature and normalisation parameters allowed to vary. If the measured temperature is $\leq$0.01keV, $>$20keV, or the temperature uncertainty is $>$ 15keV, then the spectrum will not included be in the final fit. Then a final simultaneous fit is performed using only the accepted spectra. Temperature values and unabsorbed luminosities are then determined from this final fit. We will use a temperature measurement if, a) the measured temperature is less than 25~keV, b) the upper and lower uncertainties are both positive, and c) the larger uncertainty is less than three times the smaller. Luminosities will be used if the uncertainty is not greater than the value, and if the upper and lower uncertainties are both positive. If a cluster's temperature or luminosity measurement do not meet these requirements, they are excluded.
-
-For a more complete explanation of the spectral fitting process and comparisons of results with other {\em XMM} analyses that confirm the veracity of measurements produced by this procedure, see \cite{xcsmassmethod}. All measurements for the eFEDS-XCS sample can be found in Table~\ref{tab:measurements}, along with eFEDS name, position, and redshift.
-
 \begin{figure*}
     \centering
-    \includegraphics[width=1.0\textwidth]{images/efeds_xcs_txcomp.png}
+    \includegraphics[width=1.0\textwidth]{images/efeds_xcs_txcomp.pdf}
     \caption[]{Temperature and fractional temperature error distributions of the eFEDS (red) and eFEDS-XCS (pale blue) samples, for measurements made within 500kpc apertures, centered on eFEDS coordinates. } 
     \label{fig:efedsxmmtxdist}
 \end{figure*}
 
+\subsection{Fitting Procedure}
+\label{subsec:fitproc}
+
+Cluster spectra are extracted within a 500~kpc fixed aperture (as the eFEDS catalogue contains a greater number of 500~kpc temperatures than 300~kpc) and centered on the eFEDS position.  Corresponding backgrounds are extracted within 1000-1500~kpc annuli. Non-cluster sources in both the 500~kpc apertures and background regions are identified using the XCS region files, and their corresponding events are removed during spectrum generation.  We fit absorbed \cite[with \texttt{tbabs}, ][]{tbabs} plasma emission models \citep[APEC, ][]{apec} to the spectra; these models are standard for XCS analyses, but are also the same as those used in the eFEDS spectroscopic analysis. To maximise the similarity of our analysis to eFEDS we opt to use the abundance tables published by \cite{aspl} when performing our spectral fits. The abundance parameter of the APEC model in all cases is set to 0.3~Z$_{\odot}$ and frozen, the nH parameter of the \texttt{tbabs} model is set from the full-sky HI survey by the \cite{nh} (using the HEASoft \texttt{nh} tool) and frozen. The redshift parameter is set to the eFEDS catalogue value and frozen.
+
+
+
+% All available observations and cameras are allowed to contribute to the fit of a given galaxy cluster, provided that they meet certain conditions. First, we require every spectrum to have a minimum of 10 noticed channels, ensuring no spectra have been re-binned to have only one or two channels. Each of these spectra are first fit independently, with the temperature and normalisation parameters allowed to vary.  If the measured temperature is $\leq$0.01keV, $>$20keV, or the temperature uncertainty is $>$ 15keV, then the corresponding spectrum will be rejected and not included in the final fit. When a set of acceptable spectra has been compiled, a final simultaneous fit is performed using only those spectra. An absorbed plasma emission model is created for each spectrum, then the temperature and normalisation parameters of all models are linked.  For this fit we add a simple multiplicative constant, to account for the differences in normalisation from different observations and still allow us to retrieve a single normalisation value at the end (as it has a physical meaning). The constant of the first model is set to 1 and frozen, and in all other models is allowed to vary freely. Temperature values (after XSPEC has run a suitable error calculation step), as well as the un-absorbed luminosity in energy bands of our choice, are then determined from this final fit.
+
+% Observations and cameras that meet quality requirements contribute to the fit of a given galaxy cluster. 
+Each spectrum is first fit independently, with the temperature and normalisation parameters allowed to vary. If the measured temperature is $T_{\rm{X}}\leq$0.01~keV, $T_{\rm{X}}>$20~keV, or either temperature uncertainty is $>$ 15~keV then the spectrum will not included in the final fit. Finally a simultaneous fit is performed using only the spectra that fulfil the requirements outlined above. Temperature values and unabsorbed luminosities are then determined from this final fit. We will use a temperature measurement if, a) the measured temperature is less than 25~keV, b) the upper and lower uncertainties are both positive, and c) the larger uncertainty is less than three times the smaller. Luminosities will be used if the uncertainty is not greater than the value, and if the upper and lower uncertainties are both positive. If a cluster's temperature or luminosity measurement do not meet these requirements, they are excluded.
+
+For a more complete explanation of the spectral fitting process and comparisons of results with other {\em XMM} analyses that confirm the veracity of measurements produced by this procedure, see \cite{xcsmassmethod}. All measurements for the eFEDS-XCS sample can be found in Table~\ref{tab:measurements}, along with eFEDS ID, position, and redshift.
+
 \subsection{Luminosity Comparison}
-We compare the luminosities measured by both {\em XMM} and {\em eROSITA}, since one of the main products of {\em eROSITA} will be large catalogues of X-ray luminosities. These will be used as the basis of various {\em eROSITA} science applications, for example, a mass-luminosity scaling relation \citep[such as the one recently produced by ][]{efedsmor} provides a way to estimate overdensity radii of a given cluster, as well as enabling large scale X-ray cluster cosmology. Therefore, it is important to test the fidelity of eFEDS luminosities with {\em XMM} data. 
+\label{subsec:lumcomp}
 
-The eFEDS analysis presents cluster luminosities measured via a forward-fitting analysis of 2D count-rate maps, including considerations of the morphology of the cluster, rather than by the fitting of emission models to spectroscopic data. In the context of the eFEDS (and in the future eRASS), they are able to measure accurate luminosities for clusters that do not have high enough quality data to perform spectral fitting. As such, we can directly compare {\em XMM} and {\em eROSITA} luminosities for {\color{red} 29 (${\sim}$80\%)} of the eFEDS-XCS sample. We opt to use a spectral fitting process to measure unabsorbed (corrected for hydrogen column absorption) luminosities in the soft (0.5-2.0keV) and bolometric (0.01-100keV) energy bands for those clusters with a successful temperature measurement.
+We compare the luminosities measured by both {\em XMM} and {\em eROSITA}, since one of the main products of eRASS will be large catalogues of X-ray luminosities. These will be used as the basis of various {\em eROSITA} science applications; for example, a mass-luminosity scaling relation \citep[such as the one recently produced by][]{efedsmor} provides a way to estimate overdensity radii of a given cluster, as well as enabling large scale X-ray cluster cosmology. Therefore, it is important to test the fidelity of eFEDS luminosities with {\em XMM} data. 
 
-We fit the same two models as used for the temperature calibration (a power-law with the slope fixed at 1, and left to vary), to the luminosity comparison, finding the results of both to be entirely consistent with a one-to-one relation. Figure~\ref{fig:l500kpccomp} demonstrates an excellent soft-band luminosity agreement (including the two models) between eFEDS and XCS, especially considering how different the measurement methods are. Luminosities measured by eFEDS and XCS are similarly well constrained, though the XCS uncertainties tend to be slightly smaller. The bolometric luminosity comparison shows a similar agreement.
+The eFEDS analysis presents cluster luminosities measured via a forward-fitting analysis of 2D count-rate maps, including considerations of the morphology of the cluster, rather than by the fitting of emission models to spectroscopic data. In the context of eFEDS this allows for the measurement of accurate luminosities for clusters that do not have high enough quality data to perform spectral fitting. We can directly compare {\em XMM} and {\em eROSITA} luminosities for 29 (${\sim}$80\%) of the eFEDS-XCS sample. We use a spectral fitting process to measure unabsorbed (corrected for hydrogen column absorption) luminosities in the soft (0.5-2.0keV) energy band for those clusters with a successful {\em XMM} temperature measurement.
 
-\subsection{Temperature Distributions Comparison}
+%and bolometric (0.01-100keV)
+
+We fit a power-law with the slope fixed at unity and another power-law with the slope left to vary to the luminosity comparison, finding the results of both to be entirely consistent with a one-to-one relation. The fits were performed in log space using the R package LInear Regression in Astronomy\citep[{\sc lira}\footnote{\href{https://cran.r-project.org/web/packages/lira/index.html}{LInear Regression in Astronomy}}, ][]{softlira}, fully described in \cite{LIRA}. Figure~\ref{fig:l500kpccomp} demonstrates an excellent soft-band luminosity agreement (including the two models) between eFEDS and XCS, especially considering how different the measurement methods are. We also include the data point for the cluster with eFEDS ID 1023 (discussed further in Appendix~\ref{app:split_cluster}), but do not include it in our comparison fit. Luminosities measured by eFEDS and XCS are similarly well constrained, though the XCS uncertainties tend to be slightly smaller.
+
+\subsection{Temperature Comparison}
 We have been able to measure temperatures within a 500 kpc aperture for ${\sim}$80\% of the eFEDS-XCS sample, though only ${\sim}$30\% of those also have an eFEDS temperature available (see Table~\ref{tab:samples} for a summary). As such we first compare the overall temperature, and fractional temperature uncertainty, distributions, as we did in Section~\ref{sec:efedsproperties} with the XXL-100-GC sample.
 
-Figure~\ref{fig:efedsxmmtxdist}a, which shows the overall temperature distributions of the eFEDS and eFEDS-XCS samples, demonstrates that a larger proportion of {\em XMM} temperatures than {\em eROSITA} temperatures are above ${\sim}$4~keV, similar to the behaviour in Figure~\ref{fig:xxlefeds}b with the XXL-100-GC sample. It is likely that this is due to the difference in telescope sensitivity at high energies, as well as other selection effects resulting from targeted {\em XMM} exposures, as previous work by \cite{xcsmethod} has shown that it is more difficult to measure temperatures for hotter galaxy clusters. Combined with the fact that we also observe this effect when eFEDS data is compared to XXL-100-GC, however, means that is another possible indication of a temperature calibration being required between the two telescopes. 
+Figure~\ref{fig:efedsxmmtxdist}a, which shows the overall temperature distributions of the eFEDS and eFEDS-XCS samples, demonstrates that a larger proportion of {\em XMM} temperatures than {\em eROSITA} temperatures are above ${\sim}$4~keV, similar to the behaviour in Figure~\ref{fig:xxlefeds}b with the XXL-100-GC sample. It is likely that this is due to the difference in telescope sensitivity at high energies, as well as other selection effects resulting from targeted {\em XMM} exposures. Combined with the fact that we also observe this effect when eFEDS data is compared to XXL-100-GC, however, means that is another possible indication of a temperature calibration being required between the two telescopes. 
 
-Figure~\ref{fig:efedsxmmtxdist}b demonstrates that a larger proportion of the eFEDS-XCS sample (compared to eFEDS measurements) have a fractional temperature uncertainty of less than 20\%, and as such the {\em XMM} temperature measurements are generally better constrained. However we also note that the temperature fractional error distribution of the eFEDS-XCS sample extends to larger values than eFEDS. 
+Figure~\ref{fig:efedsxmmtxdist}b demonstrates that a larger proportion of the eFEDS-XCS clusters (compared to eFEDS measurements) have a fractional temperature uncertainty of less than 20\%, and as such the {\em XMM} temperature measurements are generally better constrained. However we also note that the temperature fractional error distribution of the eFEDS-XCS sample extends to larger values than eFEDS. 
 % Although {\em XMM} has observed only a fraction of the total area of the sky, any cluster that does fall on a pointing (whether targeted or serendipitous) and can have an {\em XMM} temperature measured for it, is likely to have comparable constraints to an eFEDS temperature. However, especially for serendipitous clusters near the edge of the field of view, there will be instances were no temperature at all can be measured.
 
 Archival {\em XMM} observations can provide temperatures which are, on average, better constrained than eFEDS for those clusters that have been observed by {\em XMM}, and can also deliver more temperatures for hotter systems due to {\em XMM}'s greater sensitivity at high energies.  As such the {\em XMM} archive will be a very useful complement to the eRASS.
@@ -415,26 +487,11 @@ Archival {\em XMM} observations can provide temperatures which are, on average, 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.95\columnwidth]{images/efeds_xcs_t500cal.png}
-    \caption[]{Comparison of eFEDS and {\em XMM} cluster temperatures within 500kpc, centered on eFEDS coordinates. Pale blue line indicates best fit power-law, with 68\% confidence levels given by shaded region. Grey line indicates a power-law fit with slope set to 1 (with 68\% confidence levels given by the grey shaded region).}
+    \includegraphics[width=0.95\columnwidth]{images/efeds_xcs_t500cal.pdf}
+    \caption[]{Comparison of eFEDS and {\em XMM} cluster temperatures within 500kpc, centered on eFEDS coordinates. Pale blue line indicates best fit power-law (slope free to vary), with 68\% confidence levels given by shaded region. Grey line indicates a power-law fit with slope set to 1 (with 68\% confidence levels given by the grey shaded region). Cyan diamond is for the cluster discussed in Appendix~\ref{app:split_cluster}.}
     \label{fig:t500kpccomp}
 \end{figure}
 
-\subsection{Preliminary Temperature Calibration}
-\label{subsec:tcal}
-We must test for a difference in temperatures measured by {\em XMM} and {\em eROSITA}, so our first comparison is made between temperatures presented in the eFEDs cluster catalogue and {\em XMM} temperatures that we have measured for the same clusters. 
-
-A comparison of the 8 clusters with measured {\em XMM} and eFEDS temperatures is given in Figure~\ref{fig:xmmexposure} that appears to show a systematic offset between the two telescopes.  All but one of the clusters are below the one-to-one line, indicating that the {\em XMM} temperatures are systematically higher than the {\em eROSITA} temperatures. The majority of eFEDS temperatures are consistent with the one-to-one line, but not the temperatures measured from {\em XMM} data, as they are generally better constrained (a behaviour we saw in Figure~\ref{fig:efedsxmmtxdist}). To model this, we fit a power law of the form
-
-\begin{align}
-{\rm log}\left(T^{\:\rm{eROSITA}}_{\rm{x, 500kpc}}\right) &= {\rm log}(A_{TT}) + B_{TT}{\rm log}\left(T^{\:\rm{XMM}}_{\rm{x, 500kpc}}\right) \pm \sigma_{T_{\rm{eROSITA}}|T_{\rm{XMM}}},
-\label{equ:TvsT}
-\end{align}
-where $A_{TT}$ is the normalisation, $B_{TT}$ the slope and $\sigma_{T_{\rm{eROSITA}}|T_{\rm{XMM}}}$ the intrinsic scatter. The fits were performed in log space using the R package LInear Regression in Astronomy\citep[{\sc lira}\footnote{\href{https://cran.r-project.org/web/packages/lira/index.html}{LInear Regression in Astronomy}}, ][]{softlira}, fully described in \cite{LIRA}. The best fit parameters are given in Table~\ref{tab:tempcal}. 
-
-First, we fit the power law with the slope left free to vary, probing whether the observed offset evolves with temperature \citep[as found in][comparing between {\em Chandra} and {\em XMM}]{xmmchandracal}. We measure a slope value of 0.87$^{+0.37}_{-0.27}$, indicating that the calibration evolves with system temperature.  We note however that due to the large errors, the value of $B_{TT}$ is consistent with 1 (within 1$\sigma$).  The measured intrinsic scatter of both fits is very low (essentially consistent with zero), which is as expected.
- 
-Due to the large errors on the measure slope, we re-fit the power-law with the slope fixed at unity.  This allows us to measure a single overall factor that describes the average difference in temperatures measured by the two telescopes.  We measure a normalisation of 0.75$^{+0.09}_{-0.08}$, meaning that (on average) {\em eROSITA} measures a temperature ${\sim}25\%$ cooler than those measured by {\em XMM} for the same cluster.
 
 \begin{table}
 \begin{center}
@@ -454,6 +511,23 @@ Power Law Fixed Slope & $0.75^{+0.09}_{-0.08}$ & $1$ & $0.04^{+0.05}_{-0.02}$ \\
 \end{center}
 \end{table}
 
+
+\subsection{Temperature Calibration}
+\label{subsec:tcal}
+Motivated by the temperature offset between {\em XMM} and {\em Chandra} \citep[][]{xmmchandracal}, we test for a difference in temperatures measured by {\em XMM} and {\em eROSITA}. We make a comparison between temperatures presented in the eFEDS cluster catalogue and {\em XMM} temperatures that we have measured for the same clusters. 
+
+The comparison of 8 clusters with measured {\em XMM} and {\em eROSITA} (eFEDS) temperatures is given in Figure~\ref{fig:t500kpccomp}, and appears to show a systematic offset between the two telescopes. We also include the data point for the cluster with eFEDS ID 1023 (discussed further in Appendix~\ref{app:split_cluster}), but do not include it in our comparison fit. All but one of the clusters are below the one-to-one line, indicating that the {\em XMM} temperatures are systematically higher than their {\em eROSITA} counterparts. The majority of eFEDS temperatures are consistent with the one-to-one line, but not the temperatures measured from {\em XMM} data, as they are generally better constrained (a behaviour we saw in Figure~\ref{fig:efedsxmmtxdist}). To model this, we fit a power law of the form
+
+\begin{align}
+{\rm log}\left(T^{\:\rm{eROSITA}}_{\rm{x, 500kpc}}\right) &= {\rm log}(A_{TT}) + B_{TT}{\rm log}\left(T^{\:\rm{XMM}}_{\rm{x, 500kpc}}\right) \pm \sigma_{T_{\rm{eROSITA}}|T_{\rm{XMM}}},
+\label{equ:TvsT}
+\end{align}
+where $A_{TT}$ is the normalisation, $B_{TT}$ the slope, and $\sigma_{T_{\rm{eROSITA}}|T_{\rm{XMM}}}$ the intrinsic scatter. The fits were performed in the same way as those in Section~\ref{subsec:lumcomp}. The best fit parameters are given in Table~\ref{tab:tempcal}. 
+
+First, we fit the power law with the slope left free to vary, probing whether the observed offset evolves with temperature \citep[as found in][comparing between {\em Chandra} and {\em XMM}]{xmmchandracal}. We measure a slope value of 0.87$^{+0.37}_{-0.27}$, indicating that the calibration evolves with system temperature.  We note however that due to the large errors, the value of $B_{TT}$ is consistent with 1 (within 1$\sigma$).  The measured intrinsic scatter of both fits is very low (essentially consistent with zero), which is as expected.
+ 
+Due to the large errors on the measured slope, we re-fit the power-law with the slope fixed at unity.  This allows us to measure a single overall factor that describes the average difference in temperatures measured by the two telescopes.  We measure a normalisation of 0.75$^{+0.09}_{-0.08}$, meaning that (on average) {\em eROSITA} measures a temperature ${\sim}25\%$ cooler than those measured by {\em XMM} for the same cluster.
+
 As we have not re-analysed {\em eROSITA} spectra and measured our own temperatures for the eFEDS-XCS cluster sample, our methodologies are unlikely to be completely consistent, and as such the observed temperature calibration could be the result of some mismatch in our measuring procedures. This calibration fit is also affected by small number statistics, as very few clusters have both an eFEDS and an {\em XMM} temperature. However, we have provided evidence of an offset that requires further investigation.
 
 
@@ -461,49 +535,40 @@ As we have not re-analysed {\em eROSITA} spectra and measured our own temperatur
 \label{sec:discussion}
 In this work we have presented a measurement of the temperature offset between {\em eROSITA} and {\em XMM} for a sample of galaxy clusters.  Here we discuss potential impacts of this offset on the derived scaling relations and how the temperature calibration can be improved.  Furthermore, we explore differences in the measured centroids for eFEDS and XCS clusters and the impact on miscentering calibration on optical cluster finders.
 
-\subsection{{\em\lower{e}ROSITA}-{\em XMM} Temperature Calibration}
+\subsection{{\em eROSITA}-{\em XMM} Temperature Calibration}
 \begin{figure}
     \centering
-    \includegraphics[width=1\columnwidth]{images/efeds_xcs_wdata_lt52.pdf}
-    \caption[]{Soft-band luminosity-temperature relations for the eFEDS and eFEDS-XCS samples. Properties measured within a 500kpc fixed aperture centered on the eFEDS positions.}
+    \includegraphics[width=1\columnwidth]{images/efeds_xcs_wdata_lt.pdf}
+    \caption[]{Soft-band (0.5-2.0~keV) luminosity-temperature relations for the eFEDS and eFEDS-XCS samples. Properties measured within a 500~kpc fixed aperture centered on the eFEDS positions. eFEDS data points are green, eFEDS-XCS data points are grey.}
     \label{fig:efedsandxcslt}
 \end{figure}
 
+% {\color{red} crosses}
+% {\color{red} diamonds}
+
 \subsubsection{Luminosity-Temperature Relation}
 \label{subsubsec:LT}
-Considering the temperature offset measured in Section~\ref{subsec:tcal}, we must ascertain the impact on any  derived scaling relations, especially when comparing between telescopes.  We focus on the luminosity-temperature relation derived from eFEDS and XCS data.  This relation is frequently used to probe the self-similarity of a population of clusters, but in this case we wish to use it as a diagnostic tool to probe differences in measurements made by eFEDS and XCS.  We use all eFEDS-XCS clusters with a successful 500~kpc temperature ($T^{\rm 500kpc}_{\rm X}$) and soft-band luminosity ($L^{\rm 500kpc}_{X,0.5-2.0}$) measurement (instead of the of the 8 clusters used for the temperature calibration, due to small sample size), and all available eFEDS candidates and compare the relations.  
+Considering the temperature offset measured in Section~\ref{subsec:tcal}, we must ascertain the impact on any  derived scaling relations, especially when comparing between telescopes.  We focus on the luminosity-temperature relation derived from eFEDS and XCS data.  This relation is frequently used to probe the self-similarity of a population of clusters, but in this case we wish to use it as a diagnostic tool to probe differences in measurements made by eFEDS and XCS.  We use 28 eFEDS-XCS clusters with a successful 500~kpc temperature ($T^{\rm 500kpc}_{\rm X}$) and soft-band luminosity ($L^{\rm 500kpc}_{X,0.5-2.0}$) measurement (instead of limiting the analysis to the 8 clusters used in Section~\ref{subsec:tcal} for temperature calibration), and all available eFEDS candidates and compare the relations.  
 
-The L$^{500\rm{kpc}}_{\rm{X,0.5-2.0}}$ - T$_{\rm{X}}^{500\rm{kpc}}$ relation for eFEDS (grey point) and eFEDS-XCS (green points) is shown in Figure~\ref{fig:efedsandxcslt}, using data from 94 (eFEDS) and 29 (eFEDS-XCS) galaxy clusters.  The data cover a similar temperature range (see Figure~\ref{fig:efedsxmmtxdist}), ensuring the eFEDS-XCS sample does not preferentially select a particular population of high or low temperature clusters, and as such it is valid to compare eFEDS-XCS and eFEDS luminosity-temperature relations directly.  We fit both datasets using a power law of the form, 
+The $L^{500\rm{kpc}}_{\rm{X,0.5-2.0}}$ - $L_{\rm{X}}^{500\rm{kpc}}$ relation for eFEDS (grey points) and eFEDS-XCS (green points) is shown in Figure~\ref{fig:efedsandxcslt}, using data from 94 (eFEDS) and 29 (eFEDS-XCS) galaxy clusters. 
+% The data cover a similar temperature range (see Figure~\ref{fig:efedsxmmtxdist}), ensuring the eFEDS-XCS sample does not preferentially select a particular population of high or low temperature clusters, and as such it is valid to compare eFEDS-XCS and eFEDS luminosity-temperature relations directly.  
+We fit both sets of data using a power law of the form, 
 \begin{align}
 {\rm log}\left(\frac{L^{500\rm{kpc}}_{\rm{X,0.5-2.0}}}{E(z)L_{0}}\right) &= {\rm log}(A_{LT}) + B_{LT}{\rm log}\left(\frac{T^{\rm{500kpc}}_{\rm{X}}}{T_{0}}\right) \pm \sigma_{L|T},
 \label{equ:lt}
 \end{align}
-where $A_{LT}$ denotes the normalisation, $B_{LT}$ the slope, and $\sigma_{L|T}$ the intrinsic scatter of the relation. We calculate E(z) using the redshift supplied in the eFEDS catalogue and our chosen concordance cosmology.  The fits are again performed using the LIRA package. We set the normalisation values for soft-band luminosity and temperature to approximate median eFEDS values of $L_{0}$=2.0$\times$10$^{43}$~erg~s$^{-1}$ and $T_{0}$=2.3~keV.
+where $A_{LT}$ denotes the normalisation, $B_{LT}$ the slope, and $\sigma_{L|T}$ the intrinsic scatter of the relation. We calculate $E(z)$ using the redshift supplied in the eFEDS catalogue and our chosen concordance cosmology.  The fits are again performed using the LIRA package. We set the normalisation values for soft-band luminosity and temperature to approximate median eFEDS values of $L_{0}$=3.0$\times$10$^{43}$~erg~s$^{-1}$ and $T_{0}$=2.3~keV.
 
-Figure~\ref{fig:efedsandxcslt} shows the best-fit relations  using the eFEDS (green line) and eFEDS-XCS (grey line) samples respectively.  The best-fit values are given in Table~\ref{tab:relations}, with their distributions illustrated in Figure~\ref{fig:ltcorner}.  While the distributions highlight that the parameters of the relation are consistent within their 2$\sigma$ contours, the difference in the central value of the slope is investigated further.  We explore whether this difference can be reduced based upon the observed temperature offset found in Section~\ref{subsec:tcal}.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=1\columnwidth]{images/lt52_corner.pdf}
-    \caption[]{Corner plot of the 1$\sigma$ and 2$\sigma$ confidence contours of the L$^{500\rm{kpc}}_{\rm{x, 0.5-2.0}}$ - T$^{500\rm{kpc}}$ relation parameters, for the eFEDS (green contours), eFEDS-XCS (grey contours) and eFEDS-XCS calibrated (blue contours) samples.  The diagonal shows the posterior densities of each parameter.}
-    \label{fig:ltcorner}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=1\columnwidth]{images/efeds_lt52.pdf}
-    \caption[]{Soft-band luminosity-temperature relations for eFEDS, eFEDS-XCS, and calibrated eFEDS-XCS. Properties measured within a 500kpc fixed aperture centered on the eFEDS positions.}
-    \label{fig:prelimlt}
-\end{figure}
+Figure~\ref{fig:efedsandxcslt} shows the best-fit relations  using the eFEDS (green line) and eFEDS-XCS (grey line) samples respectively.  The best-fit values are given in Table~\ref{tab:relations}, with their distributions illustrated in Figure~\ref{fig:ltcorner}.  While the distributions highlight that the parameters of the relation are consistent within their 2$\sigma$ contours, the difference in the central value of the slope warrants further discussion.
 
 \begin{table}
 \begin{center}
-\caption[]{{\small The normalisation, slope, and residual scatter values from the LIRA fits of the different datasets, for the L$^{500\rm{kpc}}_{\rm{x, 0.5-2.0}}$ - T$_{\rm{x}}^{500\rm{kpc}}$ scaling relation.}\label{tab:relations}}
+\caption[]{{\small The normalisation, slope, and residual scatter values from the LIRA fits of the different datasets, for the $L^{500\rm{kpc}}_{\rm{X, 0.5-2.0}}$ - $T_{\rm{X}}^{500\rm{kpc}}$ scaling relation.}\label{tab:relations}}
 \vspace{1mm}
 \begin{tabular}{cccc}
 \hline
 \hline
-Relation Name & $A_{LT}$ & B_{LT} & \sigma_{L|T}\\
+Relation Name & $A_{LT}$ & $B_{LT}$ & $\sigma_{L|T}$\\
 \hline
 \hline
 eFEDS & $1.54^{+0.13}_{-0.12}$ & $2.31^{+0.13}_{-0.13}$ & $0.19^{+0.03}_{-0.03}$ \\
@@ -516,6 +581,22 @@ eFEDS-XCS Calibrated & $1.57^{+0.22}_{-0.20}$ & $1.74^{+0.24}_{-0.25}$ & $0.23^{
 \end{center}
 \end{table}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/efeds_lt52.pdf}
+    \caption[]{Soft-band luminosity-temperature relations for eFEDS, eFEDS-XCS, and calibrated eFEDS-XCS. Properties measured within a 500kpc fixed aperture centered on the eFEDS positions.}
+    \label{fig:prelimlt}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/lt52_corner.pdf}
+    \caption[]{Corner plot of the 1$\sigma$ and 2$\sigma$ confidence contours of the L$^{500\rm{kpc}}_{\rm{x, 0.5-2.0}}$ - T$^{500\rm{kpc}}$ relation parameters, for the eFEDS (green contours), eFEDS-XCS (grey contours) and eFEDS-XCS calibrated (blue contours) samples.  The diagonal shows the posterior densities of each parameter.}
+    \label{fig:ltcorner}
+\end{figure}
+
+
+
 % \subsection{Measuring a calibrated eFEDS-XCS relation}
 
 % Finally, we measure a third version of the scaling relation, designed to test the effect of the temperature calibration we quantify in section \ref{subsec:tcal} on the full eFEDS-XCS sample. If a calibration is required between temperatures measured by {\em eROSITA} and {\em XMM}, then we would expect to see differences in the normalisation and slope of luminosity-temperature relations created from the two instruments. The two cases we consider in our efforts to quantify the observed temperature discrepancy (a constant factor, or relation that evolves with T$_{x}$ would produce different effects in a luminosity-temperature relation. A constant factor temperature offset would only have a significant effect on the normalisation of the relation, whereas an evolving offset would also have an impact on the slope. Figure \ref{fig:efedsandxcslt} makes it quite clear that there are significant differences in the slopes of the two relations, which better fits the second case, an evolving temperature calibration. As such, we measure the calibrated luminosity-temperature relation by using the power law model (with slope free to vary), with parameter values provided in Table~\ref{tab:tempcal}, to simply convert the valid eFEDS-XCS temperature values to their equivalent eROSITA values. 
@@ -523,7 +604,7 @@ eFEDS-XCS Calibrated & $1.57^{+0.22}_{-0.20}$ & $1.74^{+0.24}_{-0.25}$ & $0.23^{
 % Unfortunately, as they are built upon a population, scaling relations are sensitive to selection effects and as such our comparison of eFEDs, eFEDS-XCS, and calibrated eFEDS-XCS scaling relations may be affected (unlike our direct temperature comparison). However, if we measure the relation with a calibration applied to {\em XMM} temperatures and it brings the eFEDS and eFEDS-XCS relations into better agreement with one another, it could still be another hint that such a calibration is required. 
 
 % \subsubsection{Comparison of relations}
-Therefore, we measure a third version of the scaling relation, designed to test the effect of the temperature calibration quantified in Section \ref{subsec:tcal}.  We determine a ``calibrated'' luminosity-temperature relation by using the power law model (with slope free to vary), with parameter values provided in Table~\ref{tab:tempcal}, to simply convert the valid eFEDS-XCS temperature values to their equivalent eROSITA values.
+We explore whether this difference can be reduced based upon the observed temperature offset found in Section~\ref{subsec:tcal}.  Therefore, we measure a third version of the scaling relation, designed to test the effect of the temperature calibration quantified in Section \ref{subsec:tcal}.  We determine a ``calibrated'' luminosity-temperature relation by using the power law model (with slope free to vary), with parameter values provided in Table~\ref{tab:tempcal}, to convert the eFEDS-XCS temperature values to their equivalent eROSITA values.
 
 Figure~\ref{fig:prelimlt} shows the model fits for all three relations (with data points omitted for clarity), and shows that the eFEDS-XCS calibrated scaling relation has a steepened slope and increased normalisation when compared to the original eFEDS-XCS relation.  Figure~\ref{fig:ltcorner} shows a shift of the contours and distributions (the eFEDS-XCS calibrated parameters are given by the blue contours) towards eFEDS (blue contours).  The normalisation of the calibrated eFEDS-XCS relation is fully consistent with the eFEDS relation, with the tension in the measured slopes reduced.  
 
@@ -531,73 +612,75 @@ While the eFEDS-XCS calibrated relation shifts towards the overall eFEDS relatio
 
 %The luminosity temperature relations presented in Table~\ref{tab:relations} were measured for these comparisons rather than a scientific use-case, as using a fixed aperture for luminosity measurements in that context would not be valid; as such we choose not to compare to existing scaling relations in literature.
 
-\subsubsection{Mass-Observable Relations}
-We must also consider the impact of the temperature offset on any mass-observable relations constructed, or used by, the {\em eROSITA} collaboration. Where {\em eROSITA} analyses are self-contained the offset will have no effect, its only when data from {\em XMM} is required, or when an {\em eROSITA} relation is used for {\em XMM} analysis, that it must be considered. The eRASS will be able to produce well constrained mass-temperature relations \citep[e.g.,][using eFEDS data]{efedsmor}, which are likely to be used in analyses involving other telescopes; for this to be possible we must have a good understanding of the temperature calibration.
+\subsubsection{Impact on Mass-Observable Relations}
+We must also consider the impact of the temperature offset on any mass-observable relations constructed, or used by, the {\em eROSITA} collaboration. Where {\em eROSITA} analyses are self-contained the offset will have no effect, it's only when data from {\em XMM} is required, or when an {\em eROSITA} relation is used for {\em XMM} analysis, that it must be considered. The eRASS will be able to produce well constrained mass-temperature relations \citep[e.g.,][using eFEDS data]{efedsmor}, which are likely to be used in analyses involving other telescopes; for this to be possible we must have a good understanding of the temperature calibration.
 
-Though it is unlikely that any hydrostatic masses will be measured from eRASS data (such a measurement requires more X-ray counts than the relatively short exposure time of eRASS will collect), they may still be of interest to the {\em eROSITA} team. This method produces masses of individual clusters, rather than a stack, and as such mass-observable relations generated with hydrostatic masses retain useful information about the scatter. As such, it is possible that {\em XMM} hydrostatic mass-temperature relations will be incorporated into {\em eROSITA} work, and if this is the case then the temperature offset must be quantified well enough to convert {\em XMM} temperatures to {\em eROSITA} equivalents. Once the eRASS is complete, {\em eROSITA} will be used for pointed observations, from which hydrostatic masses can be calculated (\cite{pointysanders} measured the mass of Abell 3266 during {\em eROSITA} commissioning), at which point a hydrostatic mass-temperature relation might be generated; again an understanding of the calibration will be required for {\em XMM} analyses to make use of such a relation.
+Though it is unlikely that any hydrostatic masses will be measured from eRASS data (such a measurement requires more X-ray counts than the relatively short exposure time of eRASS will collect), they may still be of interest to the {\em eROSITA} team. This method produces masses of individual clusters, rather than a stack, and as such mass-observable relations generated with hydrostatic masses retain useful information about the scatter. As such, it is possible that {\em XMM} hydrostatic mass-temperature relations will be incorporated into {\em eROSITA} work, and if this is the case then the temperature offset must be quantified well enough to convert {\em XMM} temperatures to {\em eROSITA} equivalents. Once the eRASS is complete, {\em eROSITA} will be used for pointed observations, from which hydrostatic masses can be calculated \citep[][measured the mass of Abell 3266 during {\em eROSITA} commissioning]{pointysanders}, at which point a hydrostatic mass-temperature relation might be generated; again an understanding of the calibration will be required for {\em XMM} analyses to make use of such a relation.
 
 \begin{figure*}
     \centering
-    \includegraphics[width=0.98\textwidth]{images/xmm_erass_footprint.png}
-    \caption[]{{\color{red} PLACEHOLDER} Distribution of {\em XMM} observations projected over the sky, indicated by {\color{red} black} regions. eRASS (German) highlighted by the {\color{red} orange} region.} 
+    \includegraphics[width=0.98\textwidth]{images/XCS_eRASSd.png}
+    \caption[]{Distribution of {\em XMM} observations projected over the sky, indicated by black points. The eRASS-DE half of the sky is highlighted by the red region. The background is the Planck-DustPol \citep[][]{dustpol} map, available for download on NASA's \href{http://lambda.gsfc.nasa.gov/data/footprint-maps/Planck_DustPol_Amp_256.fits.gz
+}{Lambda service}.} 
     \label{fig:germanerassxmm}
 \end{figure*}
 
 \subsubsection{Improving the Calibration}
-Aspects of our work motivate further exploration of the temperature comparison between the {\em XMM} and {\em eROSITA} telescopes, most importantly the observed temperature offset in Section~\ref{subsec:tcal} and the luminosity-temperature relations in Section~\ref{subsubsec:LT}. This is because a detailed understanding of the temperature offset is crucial for any cross-telescope analysis between {\em XMM} and {\em eROSITA}, and the calibrations in Table~\ref{tab:tempcal} do not fully correct the differences between the {\em XMM} and {\em eROSITA} luminosity-temperature relations in Figure~\ref{fig:prelimlt}.
+Aspects of our work motivate further exploration of the temperature comparison between the {\em XMM} and {\em eROSITA} telescopes, most importantly the measured temperature offset in Section~\ref{subsec:tcal} and the luminosity-temperature relations in Section~\ref{subsubsec:LT}. This is because a detailed understanding of the temperature offset is crucial for any cross-telescope analysis between {\em XMM} and {\em eROSITA}, and the calibrations in Table~\ref{tab:tempcal} do not fully correct the differences between the {\em XMM} and {\em eROSITA} luminosity-temperature relations in Figure~\ref{fig:prelimlt}.
 
-There are several ways in which we can improve our understanding of the calibration. Firstly, a complete re-analysis of the eFEDS cluster candidates' raw data using an identical methodology to the {\em XMM} analysis is required; this will eliminate a possible cause of the temperature discrepancy seen in Figure~\ref{fig:t500kpccomp}. This will also allow us access to the temperatures that were not published as part of the eFEDS catalogue due to being poorly constrained. 
+There are several ways in which we can improve our understanding of the calibration. Firstly, a complete re-analysis of the eFEDS cluster candidates' raw data using an identical methodology to the {\em XMM} analysis is required; this will eliminate a possible cause of the temperature discrepancy seen in Figure~\ref{fig:t500kpccomp}. With this approach we will have control of all aspects of the analysis, including which regions are used to mask the observations for spectrum generation (see discussion in Appendix~\ref{app:split_cluster}).
+% This will also allow us access to the temperatures that were not published as part of the eFEDS catalogue due to being poorly constrained. 
 
-Secondly, to better constrain the relationship between {\em XMM} and {\em eROSITA} temperatures we should also aim to acquire follow-up {\em XMM} observations of a representative sample of eFEDS cluster candidates, preferentially targeting optically confirmed systems with the best temperature constraints of the sample. Both increasing the size of the sample that we can directly compare to, and comparing to clusters that have better constrained temperatures, will reduce the uncertainties on our temperature calibration model. This will be especially helpful for better constraining the slope of the calibration, and when combined with a re-analysis of eFEDS will give a better description of the temperature calibration.
+Secondly, to better constrain the relationship between {\em XMM} and {\em eROSITA} temperatures, dedicated follow-up {\em XMM} observations of a representative sample of eFEDS clusters are required, preferentially targeting optically confirmed systems with the best temperature constraints of the sample. Both increasing the size of the sample that we can directly compare to, and comparing to clusters that have better constrained temperatures, will reduce the uncertainties on our temperature calibration model. This will be especially helpful for better constraining the slope of the calibration, and when combined with a re-analysis of eFEDS will give a better description of the temperature calibration.
 
-Thirdly, the eRASS survey will greatly increase the scope for direct temperature comparisons with {\em XMM} observed galaxy clusters, as it will take data for every {\em XMM} cluster. The data sharing agreement between the German and Russian consortiums that funded {\em eROSITA} involves sharing the sky equally, and the {\em eROSITA}-DE team have provided a data release schedule\footnote{\href{https://erosita.mpe.mpg.de/erass/}{{\em eROSITA}-DE Data Release Schedule}}. Figure~\ref{fig:germanerassxmm} demonstrates that the {\em eROSITA}-DE data intersect with many {\em XMM} observations, meaning that there is significant scope for comparisons of {\em XMM} and {\em eROSITA} observed galaxy clusters. The first German eRASS data release (with two passes of their half of the sky) is due in Q4 2022, and as such will not be available to the general community for at least a year. It will also not be full-depth (as the eFEDS is); that means temperatures will in general be less well constrained. Poorer constraints will be offset by the number of temperatures available, but this approach to the improvement of the temperature calibration will be most effective when used in concert with targeted {\em XMM} follow-up.
+Thirdly, the eRASS will greatly increase the scope for direct temperature comparisons with {\em XMM} observed galaxy clusters; as a full sky survey, eRASS will observe every galaxy cluster observed by {\em XMM}. The data sharing agreement between the German and Russian consortiums that funded {\em eROSITA} involves sharing the sky equally, and the {\em eROSITA}-DE team have provided a data release schedule\footnote{\href{https://erosita.mpe.mpg.de/erass/}{{\em eROSITA}-DE Data Release Schedule}}. Figure~\ref{fig:germanerassxmm} demonstrates that the {\em eROSITA}-DE data intersect with many {\em XMM} observations, meaning that there is significant scope for comparisons of {\em XMM} and {\em eROSITA} observed galaxy clusters. The first {\em eROSITA}-DE eRASS data release (with two passes of their half of the sky) is due in Q4 2022, and at the time of publication is not available to the community. It will also not be full-depth (as the eFEDS is); that means temperatures will in general be less well constrained. Poorer constraints will be offset by the number of temperatures available (due to the all-sky coverage), but this approach to the improvement of the temperature calibration will be most effective when used in concert with targeted {\em XMM} follow-up.
 
 \subsection{Positions of cluster central coordinates}
-We observed some cases where the eFEDS coordinate deviates significantly from that of a matching XAPA extended source. This generally seems to be due low signal-to-noise {\em eROSITA} data for that cluster candidate, though in some cases point source contamination appears to shift the central coordinate toward the point source. This could cause issues when combining eRASS and optical cluster catalogues, as X-ray observations are often used to calibrate the mis-centering of optical cluster finders \citep[][]{desmiscentering}, which often select the BCG as the central coordinate. Creating mis-centering priors from eRASS catalogues may be difficult if there is a large proportion of poorly constrained central coordinates.
+We noted some cases where the eFEDS coordinate deviate significantly from that of a matching XAPA extended source. This generally seems to be due low signal-to-noise {\em eROSITA} data for those cluster candidates, though in some cases point source contamination appears to shift the central coordinate toward the point source. This could cause issues when combining eRASS and optical cluster catalogues, as X-ray observations are often used to calibrate the mis-centering of optical cluster finders \citep[][]{desmiscentering}, which often select the BCG as the central coordinate. Creating mis-centering priors from eRASS catalogues may be difficult if there is a large proportion of poorly constrained central coordinates.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.95\columnwidth]{images/eFEDS_XAPA_offset.png}
+    \includegraphics[width=0.95\columnwidth]{images/eFEDS_XAPA_offset.pdf}
     \caption[]{Comparison of eFEDS central coordinates to XAPA central coordinates, for the subset of the eFEDS-XCS sample that have been detected by XAPA.}
     \label{fig:centcoords}
 \end{figure}
 
-We compare the eFEDs positions of eFEDS-XCS clusters to XAPA detection central coordinates for those clusters that have been detected by XCS.  Figure~\ref{fig:centcoords} plots the distributions of offsets between the eFEDS and XAPA coordinates (in units of kpc, calculated at the eFEDS redshift).  This indicates that there can be significant differences in the centroid positions of the two surveys, though the majority of the clusters have an offset smaller than 100kpc. We chose XAPA central coordinates rather than \texttt{XGA} peak positions to provide the fairest comparison for eFEDS positions, as centroid and peak finder techniques for measuring a central cluster position differ significantly.  We also expect centroid techniques to perform better on shallower data, though X-ray peaks are preferred for calibrations of mis-centering. 
+We compare the eFEDs positions of eFEDS-XCS clusters to XAPA detection central coordinates for those clusters that have been detected by XCS.  Figure~\ref{fig:centcoords} plots the distributions of offsets between the eFEDS and XAPA coordinates (in units of kpc, calculated at the eFEDS redshift). This indicates that there can be significant differences in the centroid positions of the two surveys, though the majority of the clusters have an offset smaller than 100~kpc. We chose XAPA central coordinates rather than \texttt{XGA} peak positions to provide the fairest comparison for eFEDS positions, as centroid and peak finder techniques for measuring a central cluster position differ significantly. We also expect centroid techniques to perform better on shallower data, though X-ray peaks are preferred for calibrations of mis-centering. 
 
 
 \section{Summary}
 \label{sec:summary}
 
-In this work we have performed the first comparison between cluster properties measured by the eFEDS survey and those measured by {\em XMM} surveys, such as XCS and XXL, both directly and for whole cluster populations. We have located and analysed eFEDS cluster candidates which have a counterpart in an {\em XMM} observation, and presented comparison's between cluster temperatures and luminosities. As part of this process we also visually inspected the eFEDS cluster candidates that lie on an {\em XMM} observation and rejected any that had no ICM emission at the eFEDS coordinates, had obviously contaminated ICM emission, or too low quality {\em XMM} data.
+In this work we have performed the first comparison between cluster properties measured by the eFEDS survey and those measured by {\em XMM} surveys, both directly and for ensembles of clusters. A comparison of XXL-100-GC and the eFEDS optically confirmed sample indicated that the two samples have very similar redshift distributions, that XXL-100-GC contained proportionally more temperature measurements above 4~keV, and that XXL-100-GC temperatures are, on average, better constrained than eFEDS temperatures (14\% vs 25\% average percentage uncertainties respectively).
 
-A discrepancy between cluster temperatures measured by eFEDS and XCS has been found and quantified, which could hint at the need for a calibration function between the eROSITA and {\em XMM} telescopes (as has been necessary between {\em XMM} and {\em Chandra}). Several variables need to be better controlled before we can definitively state that the observed discrepancy is entirely due to a required temperature calibration, but combined with the enhanced fraction of higher temperature clusters in the XXL-100-GC and eFEDS-XCS catalogues when compared to eFEDS values, we consider it to be a likely explanation. 
- 
-Our analysis finds excellent agreement between soft-band luminosities measured by eFEDS and \texttt{XGA} for the eFEDS-XCS sample, which is very encouraging for future eRASS cosmology analyses. Such analyses will rely almost exclusively on mass-luminosity relations \citep[such as the eFEDS-HSC collaboration, ][]{efedsmor}, as even full depth eRASS will not be able to measure temperatures for enough galaxy clusters. 
+We have located and analysed eFEDS cluster candidates that have a counterpart in an {\em XMM} observation; as part of this process we visually inspected eFEDS cluster candidates that are within an {\em XMM} observation and rejected any that had no ICM emission at the eFEDS coordinates, had obviously contaminated ICM emission, or too low quality {\em XMM} data.
 
-We also fit and compare the first luminosity-temperature scaling relations using data from eFEDS and eFEDS-XCS {\em XMM} counterparts, using them to compare scaling relations measured with {\em eROSITA} and {\em XMM} data. This has particular relevance for anyone wishing to use an {\em XMM} generated scaling relation in an {\em eROSITA} analysis, or vice versa, as we find a distinct tension between scaling relations from the eFEDS and eFEDS-XCS samples. We also generate a second, calibrated, eFEDS-XCS scaling relation which is in slightly better agreement with the eFEDS relation, which again may suggest that a temperature scaling between {\em XMM} and {\em eROSITA} is necessary. It is likely, however, that a large part of the observed tension between the scaling relations is due to selection effects.
+Our visual inspections of the eFEDS cluster candidates that fall on an {\em XMM} field (using {\em eROSITA}, {\em XMM}, and SDSS images) have shown that there are some aspects of {\em eROSITA}'s source finding and confirmation steps that can introduce spurious sources into their catalogues, which in turn could impact their cosmological analyses. Our inspection process finds that the eFEDS-{\em XMM} sample is ${\sim}$18\% contaminated (consistent with predictions from simulations and eFEDS measured values), and that only a minimal (${\sim}$1\%) level of contamination remains in the optically confirmed sample.
 
-Our visual inspections of the eFEDS cluster candidates that fall on an {\em XMM} field (using {\em eROSITA}, {\em XMM}, and SDSS images) have shown that there are some aspects of {\em eROSITA}'s source finding and confirmation steps that can introduce spurious sources into their catalogues, which in turn could impact their cosmological analyses. Our inspection process finds that the eFEDS-XMM sample is ${\sim}$24\% contaminated (broadly in line with eFEDS predictions and measured values), and that only a minimal (${\sim}$3\%) level of contamination remains in the optically confirmed sample.
+We have presented comparison's between cluster temperatures and luminosities. Our analysis finds excellent agreement between soft-band luminosities measured by eFEDS and XCS for the eFEDS-XCS sample, which is very encouraging for future eRASS cosmology analyses. Such analyses will rely almost exclusively on mass-luminosity relations \citep[such as the eFEDS-HSC collaboration, ][]{efedsmor}, as even full depth eRASS will not be able to measure temperatures for enough galaxy clusters. 
+
+An ensemble cluster comparison was performed between the whole eFEDS cluster candidate sample (that had successful temperature/luminosity measurements), and the eFEDS-XCS sample (that had successful temperature/luminosity measurements). It showed similar results to the XXL-100-GC comparison, with a greater percentage of {\em XMM} temperature measurements being higher than for the eFEDS sample, and better average temperature constraints for {\em XMM} measurements.
+
+A discrepancy between cluster temperatures measured by eFEDS and XCS has been found and quantified, with {\em eROSITA} temperatures being (on average) 25\% cooler than those measured by {\em XMM} for the same cluster. This could hint at the need for a calibration function between the eROSITA and {\em XMM} telescopes (as has been necessary between {\em XMM} and {\em Chandra}). Several variables need to be better controlled before we can definitively state that the observed discrepancy is entirely due to a required temperature calibration, but we consider it to be a likely explanation. 
+
+We also fit and compare luminosity-temperature scaling relations using data from eFEDS and eFEDS-XCS {\em XMM} counterparts, using them to compare scaling relations measured with {\em eROSITA} and {\em XMM} data. This has particular relevance for anyone wishing to use an {\em XMM} generated scaling relation in an {\em eROSITA} analysis, or vice versa, as we find a distinct tension between scaling relations from the eFEDS and eFEDS-XCS samples. We also generate a second, calibrated, eFEDS-XCS scaling relation which is in slightly better agreement with the eFEDS relation, which again may suggest that a temperature scaling between {\em XMM} and {\em eROSITA} is necessary. It is likely, however, that a large part of the observed tension between the scaling relations is due to selection effects.
 
 Our comparisons have shown that we can expect a great deal of useful data from the full eRASS catalogues, and that {\em XMM}-Newton still has a significant part to play as followup instrument. Its archive of 20 years worth of observations is still extremely valuable to the {\em eROSITA} team, and the X-ray astronomy community as a whole, and there will be many excellent opportunities for synergies between the two telescopes.
 
-% A full examination of {\em eROSITA} and SDSS images generated around the positions of every eFEDS cluster candidate is required to understand how often X-ray source detection issues arise in a full eRASS depth field, as the eFEDS-{\em XMM} sub-sample may not be representative of the number of issues found in the full field. Given the scale of eRASS, and the number of clusters it expects to find, it is unfeasible to have a human visually examine every candidate. As such it is crucial that the eFEDS field is used to understand whether some of the contamination of the X-ray sample can be offset by extra diagnostic steps or techniques.
-
-% An analysis working in the other direction, taking XCS cluster candidates and searching for their counterparts in the eFEDS field, to understand the detection limits of eFEDS and if/why it misses clusters detected in {\em XMM} observations by XCS.
-
 \section*{Acknowledgements}
-This work is based on data from eROSITA, the soft X-ray instrument aboard SRG, a joint Russian-German science mission supported by the Russian Space Agency (Roskosmos), in the interests of the Russian Academy of Sciences represented by its Space Research Institute (IKI), and the Deutsches Zentrum für Luft- und Raumfahrt (DLR). The SRG spacecraft was built by Lavochkin Association (NPOL) and its subcontractors, and is operated by NPOL with support from the Max Planck Institute for Extraterrestrial Physics (MPE). The development and construction of the eROSITA X-ray instrument was led by MPE, with contributions from the Dr. Karl Remeis Observatory Bamberg & ECAP (FAU Erlangen-Nuernberg), the University of Hamburg Observatory, the Leibniz Institute for Astrophysics Potsdam (AIP), and the Institute for Astronomy and Astrophysics of the University of Tübingen, with the support of DLR and the Max Planck Society. The Argelander Institute for Astronomy of the University of Bonn and the Ludwig Maximilians Universität Munich also participated in the science preparation for eROSITA.
+This work is based on data from eROSITA, the soft X-ray instrument aboard SRG, a joint Russian-German science mission supported by the Russian Space Agency (Roskosmos), in the interests of the Russian Academy of Sciences represented by its Space Research Institute (IKI), and the Deutsches Zentrum für Luft- und Raumfahrt (DLR). The SRG spacecraft was built by Lavochkin Association (NPOL) and its subcontractors, and is operated by NPOL with support from the Max Planck Institute for Extraterrestrial Physics (MPE). The development and construction of the eROSITA X-ray instrument was led by MPE, with contributions from the Dr. Karl Remeis Observatory Bamberg \& ECAP (FAU Erlangen-Nuernberg), the University of Hamburg Observatory, the Leibniz Institute for Astrophysics Potsdam (AIP), and the Institute for Astronomy and Astrophysics of the University of Tübingen, with the support of DLR and the Max Planck Society. The Argelander Institute for Astronomy of the University of Bonn and the Ludwig Maximilians Universität Munich also participated in the science preparation for eROSITA.
 
 The eROSITA data shown here were processed using the eSASS software system developed by the German eROSITA consortium.
 
-We made frequent use of TOPCAT \citep[][]{topcat} during the initial exploration of the eRASS cluster catalogue.
+We made use of TOPCAT \citep[][]{topcat} during the initial exploration of the eRASS cluster catalogue.
 
 The new X-ray analysis module developed by XCS (XGA) makes significant use of Astropy \citep[][]{astropy1, astropy2}, NumPy \citep[][]{numpy}, Matplotlib \citep[][]{matplotlib}, and pandas \citep[][]{pandassoftware,pandaspaper}. XGA also uses GetDist \citep[][]{getdist} to produce corner plots.
 
-DT, KR, and PG acknowledge support from the UK Science and Technology Facilities Council via grants {\color{red}***} (DT), {\color{red}***} (KR, PG).
+DT, KR, and PG acknowledge support from the UK Science and Technology Facilities Council via grants ST/P006760/1 (DT),  ST/P000525/1 and ST/T000473/1 (PG, KR).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Data Availability}
 
-The data underlying this article were accessed from the \href{https://erosita.mpe.mpg.de/edr/eROSITAObservations/Catalogues/}{eROSITA Early Data Release site}. The data underlying this article are available in the article and in its online supplementary material.
+The data underlying this article were accessed from the \href{https://erosita.mpe.mpg.de/edr/eROSITAObservations/Catalogues/}{eROSITA Early Data Release site}, and the {\em XMM} science archive. The derived data underlying this article are available in the article and in its online supplementary material.
 
 %%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
 
@@ -623,153 +706,162 @@ The data underlying this article were accessed from the \href{https://erosita.mp
 % \newpage
 \appendix
 
+\section{Analysing \lowercase{e}FEDS Candidate 1023}
+\label{app:split_cluster}
+
+This galaxy cluster appears to have been split into two sources by the eFEDS source finder, despite a visual inspection showing a single extended X-ray source (in both {\em eROSITA} and {\em XMM} images) as well as single population of red-sequence galaxies; this is discussed in Section~\ref{subsubsec:frag}.
+
+As one of the two sources that make up this cluster has a $T_{\rm{X}}$ and $L_{\rm{X}}$ entry in the eFEDS catalogue, and we assume that some part of the emission has been removed during the analysis due to the second source's detection region, we cannot use the eFEDS measurements in our model fits to the comparisons of luminosity (Figure~\ref{fig:l500kpccomp}) or temperature (Figure~\ref{fig:t500kpccomp}).
+
+We do attempt to make measurements of $L_{\rm{X}}$ and $T_{\rm{X}}$ (indicated in Figure~\ref{fig:l500kpccomp} and Figure~\ref{fig:t500kpccomp} by cyan diamonds) for eFEDS-1023, which involves manually adding a region to be excluded when {\em XMM} spectra are generated. This region is centered on the eFEDS X-ray candidate catalogue coordinates for eFEDS-8602, and uses the `extent' value for that candidate published in the optical counterpart catalogue as the radius of the new exclusion region. While the luminosities and temperatures measured for eFEDS-1023 are consistent with a one-to-one line, we have no way of knowing how consistent the exclusion regions in the analyses are, as the extent represents the core radius ($\rm{R}_{\rm{c}}$) of a beta profile fitted to the emission \citep[][]{efedsclusteropticalcat} and it is unlikely that it was used to decide the eFEDS exclusion region. 
+
 \section{Excluded Cluster Candidates}
 \label{app:rejected}
 
-This section details the eFEDS-{\em XMM} X-ray cluster candidates that were dropped from our final sample, as discussed in Section \ref{sec:efedsxmm}. Table~\ref{tab:xmmrejects} contains candidates that were not included due to the low quality of the {\em XMM} data available, Table~\ref{tab:contamrejects} contains candidates that were rejected from our final sample (see Sect.~\ref{sec:efeds-varification}).
+This section details the eFEDS-{\em XMM} X-ray cluster candidates that were not included in our final sample, as discussed in Section \ref{sec:efedsxmm}. Basic information about the samples used in this work is available in Table~\ref{tab:samples}. Table~\ref{tab:xmmrejects} contains candidates that were not included due to the low quality of the {\em XMM} data available, Table~\ref{tab:rejects} contains contaminants that were not included in our final sample (see Section~\ref{sec:efeds-verification}).
 
 \begin{table*}
 \begin{center}
-\caption[]{{eFEDS-{\em XMM} galaxy cluster candidates dropped due to {\em XMM}-Newton data quality issues.}\label{tab:xmmrejects}}
+\caption[]{{eFEDS-{\em XMM} galaxy cluster candidates excluded from further analysis due to one or more {\em XMM}-Newton data quality issues.\newline $^\dagger$ indicates that the candidate was present in the optically confirmed sample from \cite{efedsclusteropticalcat}.}\label{tab:xmmrejects}}
 \vspace{1mm}
-\begin{tabular}{lccc|l}
+\begin{tabular}{ccc|p{0.75\linewidth}}
 \hline
 \hline
-eFEDS Name & ID & RA & Dec & Reason for Dropping\\
+eFEDS ID & RA & Dec & Reason for exclusion\\
 \hline
 \hline
-eFEDS J085434.6-014038 & 8094 & 133.644 & -1.677 & Dropped due to being on the edge of the {\em XMM} detector \\ 
-\hline 
-eFEDS J085440.5-020931 & 7700 & 133.669 & -2.159 & Dropped due to being on the edge of the {\em XMM} detector \\ 
+8094$^\dagger$ & 133.644 & -1.677 & On the edge of the {\em XMM} field of view. \\ 
 \hline
-eFEDS J085530.2-010634 & 1797 & 133.876 & -1.11 & Dropped due to being on the edge of the {\em XMM} detector appears to be a cluster in eFEDS \\ 
-\hline 
-eFEDS J090105.3-012525 & 11836 & 135.272 & -1.424 & Dropped due to being on the edge of a shallow {\em XMM} observation appears to be extended in eFEDS \\ 
-\hline 
-eFEDS J090409.7+003831 & 8977 & 136.04 & 0.642 & XMM observation appears to be badly affected by flaring \\ 
+7700 & 133.669 & -2.159 & On the edge of the {\em XMM} field of view. \\ 
 \hline
-eFEDS J085901.6+010649 & 2757 & 134.756 & 1.114 & Matches to an XCS point source, but data is too low quality to use \\
+1797$^\dagger$ & 133.876 & -1.11 & On the edge of the {\em XMM} field of view (the {\em eROSITA} image confirms presence of an extended source). \\ 
 \hline
-eFEDS J090644.8+011124 & 5858 & 136.687 & 1.19 & Appears to be a cluster based upon eFEDS image, however, {\em XMM} data too shallow to confirm cluster \\
+11836$^\dagger$ & 135.272 & -1.424 & On the edge of the {\em XMM} field of view, and the {\em XMM} observation is shallow (1023 s exposure at the eFEDS coordinates). The {\em eROSITA} image confirms presence of an extended source. \\ 
 \hline
-eFEDS J090752.9+013407 & 2074 & 136.971 & 1.569 & Candidate detected as an XCS point source. {\em XMM} data too poor to confirm, deny, or analyse\\ 
-\hline 
-eFEDS J091248.3+002446 & 11837 & 138.201 & 0.413 & {\em XMM} observation is affected by flaring but there appears to be no source in eFEDS \\ 
-\hline 
-\end{tabular}
-\end{center}
-\end{table*}
-
-\begin{table*}
-\begin{center}
-\caption[]{{eFEDS-{\em XMM} galaxy cluster candidates rejected during our visual inspection.\newline $^\dagger$ indicates that the candidate was present in the optically confirmed sample from \cite{efedsclusteropticalcat}.}\label{tab:rejects}}
-\vspace{1mm}
-\begin{tabular}{lccc|l}
+9877$^\dagger$ & 136.04 & 0.642 & Low signal-to-noise {\em XMM} image (7489 s exposure at the eFEDS coordinates) which has been affected by flaring.  \\ 
 \hline
+2757$^\dagger$ & 134.756 & 1.114 & Low signal-to-noise {\em XMM} image (6870 s exposure at the eFEDS coordinates). \\ 
 \hline
-eFEDS Name & ID & RA & Dec & Reason for Rejection\\
+5858 & 136.687 & 1.19 & Low signal-to-noise {\em XMM} image (15020 s exposure at the eFEDS coordinates). {\em eROSITA} image confirms presence of extended source. \\ 
 \hline
+2074$^\dagger$ & 136.971 & 1.569 & Low signal-to-noise {\em XMM} image (5331 s exposure at the eFEDS coordinates). \\ 
 \hline
-eFEDS J084135.0+010150$^\dagger$ & 1644 & 130.396 & 1.031 & XCS detects two point sources from a targeted observation of an interacting galaxy pair with nuclear activity \\ 
-\hline 
-eFEDS J084201.8+005942$^\dagger$ & 3334 & 130.508 & 0.995 & No obvious source of any kind at coordinates especially at the redshift of 0.087 supplied by eFEDS catalogue \\ 
+11837$^\dagger$ & 138.201 & 0.413 & Low signal-to-noise {\em XMM} image (29479 s exposure at the eFEDS coordinates) which has been affected by flaring. The {\em eROSITA} image confirms presence of an extended source. \\ 
 \hline
-eFEDS J085022.3+001607$^\dagger$ & 8602 & 132.593 & 0.269 & This candidate is a cluster that has been split in two the other part is eFEDS J085027.9+001503 \\ 
-\hline 
-eFEDS J085255.2-013737$^\dagger$ & 1376 & 133.23 & -1.627 & No obvious source of any kind at coordinates \\
-\hline 
-eFEDS J085519.2-014315$^\dagger$ & 5909 & 133.83 & -1.721 & Appears to be a misidentified point source \\ 
-\hline
-eFEDS J085616.2-013945 & 8922 & 134.067 & -1.663 & Appears to match to an optical cluster, but can't be analysed because of foreground galaxy emission \\
-\hline
-eFEDS J085623.7-013612$^\dagger$ & 16370 & 134.098 & -1.604 & Spurious candidate in the outskirts of a bright point source, due to same source as eFEDS J085616.2-013945 \\ 
-\hline 
-eFEDS J090700.8+011032 & 9463 & 136.753 & 1.176 & Two point sources appear to have blended in the eROSITA observation \\
-\hline 
-eFEDS J090703.9+010756 & 13484 & 136.766 & 1.132 & Close to an XCS point source, but no extended source is evident in eROSITA observation \\ 
-\hline 
-eFEDS J091445.8+042622 & 13299 & 138.691 & 4.439 & Another spurious cluster candidate in the outskirts of a bright point source \\ 
-\hline
-eFEDS J092002.2+010220 & 150 & 140.009 & 1.039 & Extended X-ray emission from central elliptical galaxy contaminates any ICM/IGM emission \\
-\hline
-eFEDS J092004.4+010023 & 11754 & 140.018 & 1.007 & Spurious extended source detection in the outskirts of eFEDS J092002.2+010220 \\ 
-\hline
-eFEDS J092235.9-002443 & 3133 & 140.649 & -0.412 & Extended X-ray emission from central elliptical galaxy contaminates any ICM/IGM emission\\
-\hline
-eFEDS J084148.2+004911$^{\dagger}$ & 3008 & 130.451 & 0.82 & Appears to be a case of galaxy emission, SDSS doesn't seem to have galaxies nearby at the same redshift\\
-\hline
-eFEDS J084110.9+005200 & 5702 & 130.295 & 0.867 & No cluster galaxies evident in SDSS, emission centered on small blue source\\
-\hline
-eFEDS J090223.4+015205 & 6840 & 135.597 & 1.868 & SDSS images indicate that emission is coming from an AGN \\
+1376$^\dagger$ & 133.23 & -1.627 & {\em XMM} data too shallow for confirmation. The {\em eROSITA} and SDSS data indicate a likely cluster, but eFEDS coordinate is offset from the extended emission and SDSS galaxies.  \\ 
 \hline
 \end{tabular}
 \end{center}
 \end{table*}
 
-\section{eFEDS-XCS Measurements}
+
+\begin{table*}
+\begin{center}
+\caption[]{{eFEDS-{\em XMM} galaxy cluster candidates classed as contaminants during our visual inspection of {\em XMM}, {\em eROSITA}, and SDSS images.\newline $^\dagger$ indicates that the candidate was present in the optically confirmed sample from \cite{efedsclusteropticalcat}.}\label{tab:rejects}}
+\vspace{1mm}
+\begin{tabular}{ccc|p{0.75\linewidth}}
+\hline
+\hline
+eFEDS ID & RA & Dec & Reason for exclusion\\
+\hline
+\hline
+1644$^\dagger$ & 130.396 & 1.031 & X-ray emission appears coincident with two interacting active galaxies (identified from {\em XMM} proposal). \\ 
+\hline
+3334$^\dagger$ & 130.508 & 0.995 & No significant X-ray emission in {\em XMM} or {\em eROSITA}, especially considering low redshift assigned in the eFEDS catalogue. \\ 
+\hline
+8602$^\dagger$ & 132.593 & 0.269 & This candidate is a cluster that has been split in two, the other part has the eFEDS source ID 1023. \\ 
+\hline
+5909$^\dagger$ & 133.83 & -1.721 & eFEDS candidate detected as a point source in XCS. There are no galaxies coincident with the X-ray emission in SDSS. \\ 
+\hline
+8922$^\dagger$ & 134.067 & -1.663 & Spurious detection in the outskirts of an X-ray bright spiral galaxy. \\ 
+\hline
+16370$^\dagger$ & 134.098 & -1.604 & eFEDS candidate coincident with a collection of galaxies in SDSS; however X-ray emission is contaminated by low redshift spiral galaxy. \\ 
+\hline
+9463 & 136.753 & 1.176 & eFEDS candidate detected as two separate point sources in XCS with deeper {\em XMM} (18501 s at eFEDS coordinates) data. \\ 
+\hline
+13484 & 136.766 & 1.132 & No obvious extended X-ray emission in {\em eROSITA} or {\em XMM}.  There is no evidence of cluster galaxies in SDSS at the eFEDS measured redshift (z=0.317). \\ 
+\hline
+13299 & 138.691 & 4.439 & Spurious detection in the outskirts of the X-ray emission of a bright star. \\ 
+\hline
+150$^\dagger$ & 140.009 & 1.039 & X-ray extended emission dominated by a massive elliptical galaxy. \\ 
+\hline
+11754 & 140.018 & 1.007 & Spurious detection in the outskirts of eFEDS 150. \\ 
+\hline
+3133$^\dagger$ & 140.649 & -0.412 & SDSS indicates the presence of a group of galaxies, however, the eFEDS emission is likely dominated by the central massive elliptical galaxy. \\ 
+\hline
+3008$^\dagger$ & 130.451 & 0.82 & SDSS indicates the presence of a group of galaxies, however, the eFEDS emission is likely dominated by the central massive elliptical galaxy. \\ 
+\hline
+5702 & 130.295 & 0.867 & Deeper {\em XMM} observation (130445 s exposure at the eFEDS coordinates) reveals the X-ray emission is coming from a blue object in SDSS (which appears to be an AGN), XCS detects this as a point source  \\ 
+\hline
+6840 & 135.597 & 1.868 & eFEDS candidate appears to be coincident with a blue source in SDSS (potentially an AGN). XCS detects {\em XMM} emission as a point source, again, coincident with the SDSS source. \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table*}
+
+\section{\lowercase{e}FEDS-XCS Measurements}
 \label{app:measurements}
-In Table \ref{tab:xmmobs} we present information on the {\em XMM} data that were used for each eFEDS-XCS cluster, including the unique {\em XMM} observation identifier and as which instruments had usable data. We also include information on which instruments of which observations were allowed to contribute to the final luminosity and temperature measurements (for the two measurements apertures) of each eFEDS-XCS cluster. 
+In Table \ref{tab:xmmobs} we present information on the {\em XMM} data that were used for each eFEDS-XCS cluster, including the unique {\em XMM} observation identifier and which instruments had usable data. We also include information on which instruments of which observations were contributed to the final luminosity and temperature measurements of each eFEDS-XCS cluster. 
 In Table \ref{tab:measurements} we present temperature and luminosity values measured for the clusters in the eFEDS-XCS sample. We use \texttt{XGA} to generate spectra and run XSPEC fits for these clusters. The fitting procedure is discussed in more detail in Section \ref{subsec:fitproc}. All measurements are centered on the eFEDS coordinates from the X-ray cluster candidate catalogue, with redshift information also taken from that catalogue.
 
 \begin{table*}
 \begin{center}
-\caption{{The {\em XMM} data used in the analysis of the eFEDS-XCS sample, individual clusters denoted by their unique eFEDS ID. ObsID contains the unique identifier(s) of the {\em XMM} observation(s) used. T denotes true, F denotes false, - denotes that it is not applicable. Columns with subscript A (e.g. PN$_{\rm{A}}$) indicate whether data from that instrument was available. Columns with a subscript radius (e.g. PN$_{\rm{300kpc}}$) indicate whether that instrument's data was allowed to contribute to the final XSPEC fit (for that aperture) from which we extract temperature and luminosity information.}\label{tab:xmmobs}}
+\caption{{The {\em XMM} data used in the analysis of the eFEDS-XCS sample, individual clusters denoted by their unique eFEDS ID. ObsID contains the unique identifier(s) of the {\em XMM} observation(s) used. T denotes true, F denotes false, - denotes that it is not applicable. Columns with a subscript radius (e.g. PN$_{\rm{500kpc}}$) indicate whether that instrument's data contributed to the final XSPEC fit from which we extract temperature and luminosity information.}\label{tab:xmmobs}}
 \vspace{1mm}
 \begin{tabular}{ccccccccccc}
 \hline
 \hline
-eFEDS ID & ObsID & PN_\rm{A} & MOS1_\rm{A} & MOS2_\rm{A} & PN_\rm{300kpc} & MOS1_\rm{300kpc} & MOS2_\rm{300kpc} & PN_\rm{500kpc} & MOS1_\rm{500kpc} & MOS2_\rm{500kpc}\\
+eFEDS ID & ObsID & PN$_{\rm{A}}$ & MOS1$_{\rm{A}}$ & MOS2$_{\rm{A}}$ & PN$_{\rm{500kpc}}$ & MOS1$_{\rm{500kpc}}$ & MOS2$_{\rm{500kpc}}$\\
 \hline
 \hline
-\multirow{2}{4em}{\centering 6605} & 0202940101 & T & T & T & T & F & F & F & F & F \\ & 0202940201 & T & T & T & T & T & T & T & T & T \\ 
+\multirow{2}{4em}{\centering 6605} & 0202940101 & T & T & T & F & F & F \\ & 0202940201 & T & T & T & T & T & T \\ 
 \hline
-144 & 0650381601 & T & T & T & T & T & T & T & T & T \\ 
+144 & 0650381601 & T & T & T & T & T & T \\ 
 \hline
-7831 & 0784350101 & T & T & T & T & T & T & T & T & T \\ 
+7831 & 0784350101 & T & T & T & T & T & T \\ 
 \hline
-1023 & 0761730501 & T & F & T & T & - & T & T & - & T \\ 
+1023 & 0761730501 & T & F & T & T & - & T \\ 
 \hline
-6125 & 0761730501 & T & F & T & T & - & T & T & - & T \\ 
+6125 & 0761730501 & T & F & T & T & - & T \\ 
 \hline
-339 & 0655340137 & T & T & T & T & T & T & T & T & T \\ 
+339 & 0655340137 & T & T & T & T & T & T \\ 
 \hline
-4810 & 0655340137 & T & T & T & - & - & - & T & F & F \\ 
+4810 & 0655340137 & T & T & T & T & F & F \\ 
 \hline
-1458 & 0655340135 & T & T & T & T & T & T & T & T & T \\ 
+1458 & 0655340135 & T & T & T & T & T & T \\ 
 \hline
-2079 & 0651170301 & T & T & T & T & T & T & T & T & T \\ 
+2079 & 0651170301 & T & T & T & T & T & T \\ 
 \hline
-569 & 0783881001 & T & T & T & T & T & T & T & T & T \\ 
+569 & 0783881001 & T & T & T & T & T & T \\ 
 \hline
-1385 & 0783881001 & T & F & T & - & - & - & T & - & T \\ 
+1385 & 0783881001 & T & F & T & T & - & T \\ 
 \hline
-8857 & 0725290142 & T & T & T & - & - & - & - & - & - \\ 
+8857 & 0725290142 & T & T & T & - & - & - \\ 
 \hline
-\multirow{3}{4em}{\centering 3171} & 0725300134 & T & F & T & F & - & F & F & - & T \\ & 0725290144 & T & T & T & T & F & F & T & T & F \\ & 0725290145 & T & F & T & F & - & F & T & - & T \\ 
+\multirow{3}{4em}{\centering 3171} & 0725300134 & T & F & T & F & - & T \\ & 0725290144 & T & T & T & T & T & F \\ & 0725290145 & T & F & T & T & - & T \\ 
 \hline
-\multirow{2}{4em}{\centering 8881} & 0725290139 & T & T & T & F & F & F & F & F & F \\ & 0725290146 & T & T & T & T & F & F & T & F & T \\ 
+\multirow{2}{4em}{\centering 8881} & 0725290139 & T & T & T & F & F & F \\ & 0725290146 & T & T & T & T & F & T \\ 
 \hline
-\multirow{2}{4em}{\centering 1104} & 0655340160 & T & T & T & F & F & F & T & F & T \\ & 0804410201 & T & T & T & T & T & T & T & T & T \\ 
+\multirow{2}{4em}{\centering 1104} & 0655340160 & T & T & T & T & F & T \\ & 0804410201 & T & T & T & T & T & T \\ 
 \hline
-\multirow{2}{4em}{\centering 4232} & 0655340160 & T & T & T & - & - & - & F & F & F \\ & 0804410201 & T & T & T & - & - & - & T & T & T \\ 
+\multirow{2}{4em}{\centering 4232} & 0655340160 & T & T & T & F & F & F \\ & 0804410201 & T & T & T & T & T & T \\ 
 \hline
-\multirow{3}{4em}{\centering 5655} & 0725300158 & T & T & T & T & F & F & T & T & F \\ & 0725300159 & T & F & T & T & - & T & T & - & T \\ & 0725300136 & T & T & F & F & T & - & T & F & - \\ 
+\multirow{3}{4em}{\centering 5655} & 0725300158 & T & T & T & T & T & F \\ & 0725300159 & T & F & T & T & - & T \\ & 0725300136 & T & T & F & T & F & - \\ 
 \hline
-\multirow{3}{4em}{\centering 1712} & 0725300140 & T & T & F & F & F & - & T & T & - \\ & 0725300132 & T & T & T & T & F & F & T & F & F \\ & 0725300131 & T & T & T & T & F & F & F & F & T \\ 
+\multirow{3}{4em}{\centering 1712} & 0725300140 & T & T & F & T & T & - \\ & 0725300132 & T & T & T & T & F & F \\ & 0725300131 & T & T & T & F & F & T \\ 
 \hline
-\multirow{2}{4em}{\centering 5774} & 0725300157 & T & T & T & - & - & - & - & - & - \\ & 0725310131 & T & T & T & - & - & - & - & - & - \\ 
+\multirow{2}{4em}{\centering 5774} & 0725300157 & T & T & T & - & - & - \\ & 0725310131 & T & T & T & - & - & - \\ 
 \hline
-\multirow{2}{4em}{\centering 3590} & 0725310152 & T & T & T & - & - & - & T & F & F \\ & 0725300160 & T & F & T & - & - & - & F & - & F \\ 
+\multirow{2}{4em}{\centering 3590} & 0725310152 & T & T & T & T & F & F \\ & 0725300160 & T & F & T & F & - & F \\ 
 \hline
-\multirow{2}{4em}{\centering 12660} & 0725290131 & T & T & T & T & F & T & T & T & T \\ & 0725290154 & T & T & T & F & F & F & F & T & T \\ 
+\multirow{2}{4em}{\centering 12660} & 0725290131 & T & T & T & T & T & T \\ & 0725290154 & T & T & T & F & T & T \\ 
 \hline
-\multirow{3}{4em}{\centering 3585} & 0725310149 & T & T & T & F & F & F & T & F & F \\ & 0725310150 & T & T & T & T & F & F & T & F & T \\ & 0725310131 & T & F & F & T & - & - & T & - & - \\ 
+\multirow{3}{4em}{\centering 3585} & 0725310149 & T & T & T & T & F & F \\ & 0725310150 & T & T & T & T & F & T \\ & 0725310131 & T & F & F & T & - & - \\ 
 \hline
-\multirow{2}{4em}{\centering 5170} & 0725300152 & T & F & T & T & - & F & T & - & F \\ & 0725300153 & T & T & T & F & F & F & T & F & F \\ 
+\multirow{2}{4em}{\centering 5170} & 0725300152 & T & F & T & T & - & F \\ & 0725300153 & T & T & T & T & F & F \\ 
 \hline
-\multirow{2}{4em}{\centering 9359} & 0725300145 & T & F & T & - & - & - & T & - & T \\ & 0725300146 & T & T & T & - & - & - & T & F & F \\ 
+\multirow{2}{4em}{\centering 9359} & 0725300145 & T & F & T & T & - & T \\ & 0725300146 & T & T & T & T & F & F \\ 
 \hline
-
 \end{tabular}
 \end{center}
 \end{table*}
@@ -781,37 +873,35 @@ eFEDS ID & ObsID & PN_\rm{A} & MOS1_\rm{A} & MOS2_\rm{A} & PN_\rm{300kpc} & MOS1
 \begin{tabular}{ccccccccccc}
 \hline
 \hline
-eFEDS ID & ObsID & PN_\rm{A} & MOS1_\rm{A} & MOS2_\rm{A} & PN_\rm{300kpc} & MOS1_\rm{300kpc} & MOS2_\rm{300kpc} & PN_\rm{500kpc} & MOS1_\rm{500kpc} & MOS2_\rm{500kpc}\\
+eFEDS ID & ObsID & PN$_{\rm{A}}$ & MOS1$_{\rm{A}}$ & MOS2$_{\rm{A}}$ & PN$_{\rm{500kpc}}$ & MOS1$_{\rm{500kpc}}$ & MOS2$_{\rm{500kpc}}$\\
 \hline
 \hline
-
-\multirow{2}{4em}{\centering 3259} & 0725300144 & T & T & T & T & F & F & T & T & T \\ & 0725300151 & T & T & T & T & T & F & F & F & T \\ 
+\multirow{2}{4em}{\centering 3259} & 0725300144 & T & T & T & T & T & T \\ & 0725300151 & T & T & T & F & F & T \\ 
 \hline
-\multirow{5}{4em}{\centering 7086} & 0725310133 & T & F & F & - & - & - & - & - & - \\ & 0725310147 & T & F & T & - & - & - & - & - & - \\ & 0725310148 & T & T & T & - & - & - & - & - & - \\ & 0725310157 & F & F & T & - & - & - & - & - & - \\ & 0402780801 & T & T & T & - & - & - & - & - & - \\ 
+\multirow{5}{4em}{\centering 7086} & 0725310133 & T & F & F & - & - & - \\ & 0725310147 & T & F & T & - & - & - \\ & 0725310148 & T & T & T & - & - & - \\ & 0725310157 & F & F & T & - & - & - \\ & 0402780801 & T & T & T & - & - & - \\ 
 \hline
-\multirow{3}{4em}{\centering 5219} & 0725310158 & T & T & T & F & F & F & T & F & F \\ & 0725310147 & T & F & F & F & - & - & T & - & - \\ & 0725310159 & T & T & T & T & F & F & T & F & F \\ 
+\multirow{3}{4em}{\centering 5219} & 0725310158 & T & T & T & T & F & F \\ & 0725310147 & T & F & F & T & - & - \\ & 0725310159 & T & T & T & T & F & F \\ 
 \hline
-7084 & 0725310157 & T & T & T & - & - & - & - & - & - \\ 
+7084 & 0725310157 & T & T & T & - & - & - \\ 
 \hline
-\multirow{2}{4em}{\centering 885} & 0725310142 & T & T & T & T & T & T & T & T & T \\ & 0725310141 & T & F & T & T & - & F & T & - & T \\ 
+\multirow{2}{4em}{\centering 885} & 0725310142 & T & T & T & T & T & T \\ & 0725310141 & T & F & T & T & - & T \\ 
 \hline
-2004 & 0800400501 & T & F & T & T & - & T & T & - & T \\ 
+2004 & 0800400501 & T & F & T & T & - & T \\ 
 \hline
-3523 & 0800400501 & T & T & T & F & T & T & F & T & T \\ 
+3523 & 0800400501 & T & T & T & F & T & T \\ 
 \hline
-372 & 0602830401 & T & F & F & T & - & - & T & - & - \\ 
+372 & 0602830401 & T & F & F & T & - & - \\ 
 \hline
-4253 & 0602830401 & T & F & T & T & - & T & F & - & T \\ 
+4253 & 0602830401 & T & F & T & F & - & T \\ 
 \hline
-\multirow{2}{4em}{\centering 534} & 0804410101 & T & T & T & T & T & T & T & T & T \\ & 0650381801 & T & T & T & T & T & T & T & T & T \\ 
+\multirow{2}{4em}{\centering 534} & 0804410101 & T & T & T & T & T & T \\ & 0650381801 & T & T & T & T & T & T \\ 
 \hline
-100 & 0804410501 & T & T & T & T & T & T & T & T & T \\ 
+100 & 0804410501 & T & T & T & T & T & T \\ 
 \hline
-857 & 0823710301 & T & T & T & T & T & T & T & T & T \\ 
+857 & 0823710301 & T & T & T & T & T & T \\ 
 \hline
-12565 & 0802220601 & T & F & F & T & - & - & - & - & - \\ 
+12565 & 0802220601 & T & F & F & - & - & - \\ 
 \hline
-
 \end{tabular}
 \end{center}
 \end{table*}
@@ -819,93 +909,106 @@ eFEDS ID & ObsID & PN_\rm{A} & MOS1_\rm{A} & MOS2_\rm{A} & PN_\rm{300kpc} & MOS1
 
 \begin{table*}
 \begin{center}
-\caption[]{{eFEDS-XCS galaxy cluster \texttt{XGA} measured values, RA, Dec, and redshift are taken from the eFEDS X-ray cluster candidate catalogue. T$^{\rm{XGA}}_{\rm{x}, 300kpc}$ and T$^{\rm{XGA}}_{\rm{x}, 500kpc}$ are temperatures within 300kpc and 500kpc apertures respectively, given in keV. L$^{\rm{XGA, 52}}_{\rm{x, 3(5)00kpc}}$ and L$^{\rm{XGA, bol}}_{\rm{x, 3(5)00kpc}}$ are 0.5-2.0keV and bolometric luminosities within a 3(5)00kpc aperture, in units of 10$^{44}$erg $\rm{s}^{-1}$. All uncertainties calculated from 68\% confidence limits, equivalent to $1\sigma$.}\label{tab:measurements}}
+\caption[]{{eFEDS-XCS galaxy cluster \texttt{XGA} measured values, RA, Dec, and redshift are taken from the eFEDS X-ray cluster candidate catalogue. T$^{\rm{XGA}}_{\rm{x}, 500kpc}$ are temperatures within 500\,kpc apertures, given in keV. L$^{\rm{XGA, 52}}_{\rm{x, 500kpc}}$ and L$^{\rm{XGA, bol}}_{\rm{x, 500kpc}}$ are 0.5-2 .0keV and bolometric luminosities within a 500\,kpc apertures, in units of 10$^{43}$erg $\rm{s}^{-1}$. All uncertainties calculated from 68\% confidence limits, equivalent to $1\sigma$.}\label{tab:measurements}}
 \vspace{1mm}
-\begin{tabular}{ccccccccccc}
+\begin{tabular}{cccccccccc}
 \hline
 \hline
-eFEDS ID & eFEDS Name & RA & Dec & z & T$^{\rm{XGA}}_{\rm{x}, 300kpc}$ & T$^{\rm{XGA}}_{\rm{x}, 500kpc}$ & L$^{\rm{XGA, 52}}_{\rm{x, 300kpc}}$ & L$^{\rm{XGA, bol}}_{\rm{x, 300kpc}}$ & L$^{\rm{XGA, 52}}_{\rm{x, 500kpc}}$ & L$^{\rm{XGA, bol}}_{\rm{x, 500kpc}}$\\
+eFEDS ID & RA & Dec & z & T$^{\rm{XGA}}_{\rm{x}, 500kpc}$ & L$^{\rm{XGA, 52}}_{\rm{x, 500kpc}}$ & L$^{\rm{XGA, bol}}_{\rm{x, 500kpc}}$\\
 \hline
 \hline
-6605 & eFEDS J084124.7+004636 & 130.353 & 0.777 & 0.41 & $1.84^{+0.24}_{-0.28}$ & $1.61^{+0.17}_{-0.13}$ & $0.02^{+0.13}_{-0.02}$ & $0.05^{+0.35}_{-0.05}$ & $0.23^{+0.02}_{-0.02}$ & $0.48^{+0.06}_{-0.04}$ \\ 
+6605 & 130.353 & 0.777 & 0.41 & $1.61^{+0.17}_{-0.13}$ & $2.32^{+0.16}_{-0.17}$ & $4.81^{+0.46}_{-0.41}$ \\ 
 \hline
-144 & eFEDS J084528.7+032739 & 131.37 & 3.461 & 0.33 & $6.26^{+0.72}_{-0.66}$ & $5.8^{+0.59}_{-0.48}$ & $1.28^{+0.06}_{-0.06}$ & $4.65^{+0.33}_{-0.42}$ & $1.92^{+0.07}_{-0.08}$ & $6.71^{+0.36}_{-0.47}$ \\ 
+144 & 131.37 & 3.461 & 0.33 & $5.8^{+0.59}_{-0.48}$ & $19.18^{+0.84}_{-0.67}$ & $67.1^{+3.88}_{-3.88}$ \\ 
 \hline
-7831 & eFEDS J084905.4+021436 & 132.272 & 2.243 & 0.4 & $1.64^{+0.13}_{-0.11}$ & $1.61^{+0.1}_{-0.11}$ & $0.19^{+0.02}_{-0.02}$ & $0.4^{+0.04}_{-0.04}$ & $0.28^{+0.02}_{-0.01}$ & $0.59^{+0.05}_{-0.04}$ \\ 
+7831 & 132.272 & 2.243 & 0.4 & $1.61^{+0.1}_{-0.11}$ & $2.82^{+0.21}_{-0.15}$ & $5.87^{+0.44}_{-0.43}$ \\ 
 \hline
-1023 & eFEDS J085027.9+001503 & 132.616 & 0.251 & 0.2 & $3.98^{+0.21}_{-0.2}$ & $3.1^{+0.13}_{-0.13}$ & $0.23^{+0.0}_{-0.0}$ & $0.66^{+0.02}_{-0.02}$ & $0.38^{+0.01}_{-0.01}$ & $0.98^{+0.02}_{-0.03}$ \\ 
+1023$^{\dagger}$ & 132.616 & 0.251 & 0.2 & $3.08^{+0.14}_{-0.13}$ & $3.55^{+0.04}_{-0.05}$ & $9.29^{+0.25}_{-0.22}$ \\ 
 \hline
-6125 & eFEDS J085030.5+003330 & 132.627 & 0.558 & 0.19 & $1.89^{+0.19}_{-0.18}$ & $2.39^{+0.33}_{-0.31}$ & $0.05^{+0.0}_{-0.0}$ & $0.11^{+0.01}_{-0.01}$ & $0.1^{+0.0}_{-0.01}$ & $0.23^{+0.02}_{-0.02}$ \\ 
+6125 & 132.627 & 0.558 & 0.19 & $2.39^{+0.33}_{-0.31}$ & $0.98^{+0.05}_{-0.05}$ & $2.35^{+0.2}_{-0.18}$ \\ 
 \hline
-339 & eFEDS J085217.1-010131 & 133.071 & -1.025 & 0.46 & $5.24^{+1.15}_{-0.72}$ & $5.57^{+0.81}_{-0.63}$ & $1.1^{+0.07}_{-0.08}$ & $3.67^{+0.31}_{-0.32}$ & $1.83^{+0.08}_{-0.09}$ & $6.28^{+0.53}_{-0.57}$ \\ 
+339 & 133.071 & -1.025 & 0.46 & $5.57^{+0.81}_{-0.63}$ & $18.3^{+0.71}_{-0.76}$ & $62.82^{+4.09}_{-6.48}$ \\ 
 \hline
-4810 & eFEDS J085231.2-011230 & 133.13 & -1.208 & 0.55 & - & $2.06^{+2.12}_{-0.72}$ & - & - & $0.46^{+0.13}_{-0.12}$ & $1.01^{+0.34}_{-0.36}$ \\ 
+4810 & 133.13 & -1.208 & 0.55 & $2.06^{+2.12}_{-0.72}$ & $4.56^{+1.06}_{-1.85}$ & $10.14^{+3.84}_{-4.1}$ \\ 
 \hline
-1458 & eFEDS J085412.9-022123 & 133.554 & -2.357 & 0.38 & $4.11^{+0.83}_{-0.59}$ & $4.47^{+0.78}_{-0.72}$ & $0.88^{+0.06}_{-0.06}$ & $2.59^{+0.21}_{-0.23}$ & $1.16^{+0.05}_{-0.07}$ & $3.56^{+0.36}_{-0.44}$ \\ 
+1458 & 133.554 & -2.357 & 0.38 & $4.47^{+0.78}_{-0.72}$ & $11.59^{+0.53}_{-0.75}$ & $35.63^{+3.34}_{-4.39}$ \\ 
 \hline
-2079 & eFEDS J085447.1-012132 & 133.696 & -1.359 & 0.35 & $2.74^{+0.5}_{-0.35}$ & $3.27^{+0.56}_{-0.38}$ & $0.27^{+0.02}_{-0.02}$ & $0.66^{+0.06}_{-0.08}$ & $0.46^{+0.02}_{-0.03}$ & $1.22^{+0.09}_{-0.1}$ \\ 
+2079 & 133.696 & -1.359 & 0.35 & $3.27^{+0.56}_{-0.38}$ & $4.59^{+0.23}_{-0.27}$ & $12.23^{+0.86}_{-0.98}$ \\ 
 \hline
-569 & eFEDS J085620.8+014649 & 134.086 & 1.78 & 0.72 & $5.15^{+0.19}_{-0.19}$ & $4.94^{+0.16}_{-0.16}$ & $1.92^{+0.04}_{-0.03}$ & $6.31^{+0.13}_{-0.16}$ & $3.0^{+0.05}_{-0.05}$ & $9.63^{+0.18}_{-0.25}$ \\ 
+569 & 134.086 & 1.78 & 0.72 & $4.94^{+0.16}_{-0.16}$ & $29.96^{+0.55}_{-0.44}$ & $96.29^{+2.02}_{-1.94}$ \\ 
 \hline
-1385 & eFEDS J085627.2+014218 & 134.113 & 1.705 & 0.73 & - & $6.47^{+1.49}_{-1.11}$ & - & - & $0.71^{+0.03}_{-0.03}$ & $2.62^{+0.28}_{-0.37}$ \\ 
+1385 & 134.113 & 1.705 & 0.73 & $6.47^{+1.49}_{-1.11}$ & $7.06^{+0.4}_{-0.37}$ & $26.2^{+2.66}_{-3.5}$ \\ 
 \hline
-8857 & eFEDS J085838.0+012658 & 134.658 & 1.449 & 0.75 & - & - & - & - & - & - \\ 
+8857 & 134.658 & 1.449 & 0.75 & - & - & - \\ 
 \hline
-3171 & eFEDS J090104.5+011643 & 135.269 & 1.279 & 0.25 & $1.37^{+0.43}_{-0.07}$ & $1.7^{+0.24}_{-0.2}$ & $0.14^{+0.04}_{-0.03}$ & $0.28^{+0.09}_{-0.06}$ & $0.26^{+0.02}_{-0.08}$ & $0.57^{+0.05}_{-0.18}$ \\ 
+3171 & 135.269 & 1.279 & 0.25 & $1.7^{+0.24}_{-0.2}$ & $2.64^{+0.26}_{-0.63}$ & $5.69^{+0.76}_{-1.3}$ \\ 
 \hline
-8881 & eFEDS J090115.4+005040 & 135.314 & 0.844 & 0.31 & $1.36^{+6.48}_{-0.53}$ & $3.27^{+4.56}_{-1.79}$ & $0.04^{+0.03}_{-0.04}$ & $0.09^{+0.07}_{-0.07}$ & $0.11^{+0.03}_{-0.04}$ & $0.3^{+0.14}_{-0.19}$ \\ 
+8881 & 135.314 & 0.844 & 0.31 & $3.27^{+4.56}_{-1.79}$ & $1.13^{+0.34}_{-0.36}$ & $3.02^{+1.2}_{-1.7}$ \\ 
 \hline
-1104 & eFEDS J090129.2-013854 & 135.372 & -1.648 & 0.31 & $6.57^{+0.54}_{-0.42}$ & $5.96^{+0.32}_{-0.32}$ & $0.57^{+0.01}_{-0.02}$ & $2.14^{+0.08}_{-0.11}$ & $1.09^{+0.1}_{-0.11}$ & $3.87^{+0.4}_{-0.34}$ \\ 
+1104 & 135.372 & -1.648 & 0.31 & $5.96^{+0.32}_{-0.32}$ & $10.94^{+1.11}_{-0.81}$ & $38.75^{+4.67}_{-4.06}$ \\ 
 \hline
-4232 & eFEDS J090146.3-013756 & 135.443 & -1.632 & 0.29 & - & $1.97^{+0.5}_{-0.29}$ & - & - & $0.11^{+0.02}_{-0.01}$ & $0.23^{+0.05}_{-0.03}$ \\ 
+4232 & 135.443 & -1.632 & 0.29 & $1.95^{+0.53}_{-0.3}$ & $0.99^{+0.1}_{-0.14}$ & $2.19^{+0.36}_{-0.33}$ \\ 
 \hline
-5655 & eFEDS J090256.3+014625 & 135.735 & 1.774 & 0.12 & $0.89^{+0.13}_{-0.09}$ & $0.97^{+0.11}_{-0.12}$ & $0.01^{+0.01}_{-0.01}$ & $0.02^{+0.01}_{-0.01}$ & $0.0^{+0.01}_{-0.0}$ & $0.0^{+0.02}_{-0.0}$ \\ 
+5655 & 135.735 & 1.774 & 0.12 & $0.97^{+0.11}_{-0.12}$ & $0.02^{+0.11}_{-0.02}$ & $0.04^{+0.19}_{-0.04}$ \\ 
 \hline
-1712 & eFEDS J090257.5+004819 & 135.74 & 0.805 & 0.52 & $1.29^{+0.41}_{-0.35}$ & $2.08^{+1.74}_{-0.63}$ & $0.15^{+0.1}_{-0.11}$ & $0.29^{+0.24}_{-0.22}$ & $0.61^{+0.24}_{-0.21}$ & $1.37^{+0.65}_{-0.4}$ \\ 
+1712 & 135.74 & 0.805 & 0.52 & $2.08^{+1.74}_{-0.63}$ & $6.12^{+2.32}_{-1.85}$ & $13.68^{+4.61}_{-4.53}$ \\ 
 \hline
-5774 & eFEDS J090408.6+012555 & 136.036 & 1.432 & 0.84 & - & - & - & - & - & - \\ 
+5774 & 136.036 & 1.432 & 0.84 & - & - & - \\ 
 \hline
-3590 & eFEDS J090418.7+020642 & 136.078 & 2.112 & 0.81 & - & $4.99^{+8.64}_{-2.3}$ & - & - & $1.02^{+0.17}_{-0.24}$ & $3.28^{+0.81}_{-1.15}$ \\ 
+3590 & 136.078 & 2.112 & 0.81 & $4.99^{+8.64}_{-2.3}$ & $10.17^{+1.35}_{-3.57}$ & $32.84^{+7.6}_{-13.35}$ \\ 
 \hline
-12660 & eFEDS J090419.2-010436 & 136.08 & -1.077 & 0.31 & $2.07^{+1.13}_{-0.66}$ & $2.68^{+1.51}_{-0.81}$ & $0.05^{+0.02}_{-0.01}$ & $0.12^{+0.03}_{-0.03}$ & $0.08^{+0.02}_{-0.01}$ & $0.2^{+0.05}_{-0.05}$ \\ 
+12660 & 136.08 & -1.077 & 0.31 & $2.68^{+1.51}_{-0.81}$ & $0.81^{+0.21}_{-0.14}$ & $2.01^{+0.55}_{-0.47}$ \\ 
 \hline
-3585 & eFEDS J090540.8+013219 & 136.42 & 1.539 & 0.64 & $5.96^{+9.62}_{-2.3}$ & $4.0^{+1.46}_{-0.94}$ & $0.41^{+0.07}_{-0.12}$ & $1.44^{+0.3}_{-0.54}$ & $0.88^{+0.18}_{-0.17}$ & $2.55^{+0.39}_{-0.73}$ \\ 
+3585 & 136.42 & 1.539 & 0.64 & $4.0^{+1.46}_{-0.94}$ & $8.81^{+2.0}_{-1.89}$ & $25.52^{+6.27}_{-6.63}$ \\ 
 \hline
-5170 & eFEDS J090553.6+002244 & 136.473 & 0.379 & 0.37 & $1.13^{+0.18}_{-0.23}$ & $1.22^{+0.14}_{-0.18}$ & $0.2^{+0.03}_{-0.03}$ & $0.38^{+0.08}_{-0.1}$ & $0.23^{+0.04}_{-0.05}$ & $0.44^{+0.06}_{-0.12}$ \\ 
+5170 & 136.473 & 0.379 & 0.37 & $1.22^{+0.14}_{-0.18}$ & $2.33^{+0.38}_{-0.46}$ & $4.42^{+0.74}_{-0.94}$ \\ 
 \hline
-9359 & eFEDS J090600.4-002521 & 136.502 & -0.423 & 0.3 & - & $1.92^{+1.46}_{-0.51}$ & - & - & $0.1^{+0.07}_{-0.07}$ & $0.22^{+0.08}_{-0.19}$ \\ 
+9359 & 136.502 & -0.423 & 0.3 & $1.92^{+1.46}_{-0.51}$ & $1.0^{+0.66}_{-0.67}$ & $2.2^{+1.89}_{-1.4}$ \\ 
 \hline
-3259 & eFEDS J090601.1+000055 & 136.504 & 0.015 & 0.2 & $3.73^{+5.01}_{-1.93}$ & $2.53^{+1.06}_{-0.59}$ & $0.07^{+0.02}_{-0.02}$ & $0.19^{+0.06}_{-0.06}$ & $0.12^{+0.04}_{-0.02}$ & $0.3^{+0.09}_{-0.07}$ \\ 
+3259 & 136.504 & 0.015 & 0.2 & $2.53^{+1.06}_{-0.59}$ & $1.22^{+0.33}_{-0.19}$ & $2.96^{+0.87}_{-0.68}$ \\ 
 \hline
-7086 & eFEDS J090637.0+010852 & 136.654 & 1.148 & 0.79 & - & - & - & - & - & - \\ 
+7086 & 136.654 & 1.148 & 0.79 & - & - & - \\ 
 \hline
-5219 & eFEDS J090754.6+005738 & 136.977 & 0.961 & 0.74 & $3.81^{+3.83}_{-1.52}$ & $4.74^{+2.17}_{-1.44}$ & $0.88^{+0.2}_{-0.19}$ & $2.48^{+0.43}_{-0.63}$ & $0.99^{+0.17}_{-0.17}$ & $3.12^{+0.46}_{-0.72}$ \\ 
+5219 & 136.977 & 0.961 & 0.74 & $4.74^{+2.17}_{-1.44}$ & $9.92^{+1.76}_{-1.6}$ & $31.21^{+5.25}_{-7.57}$ \\ 
 \hline
-7084 & eFEDS J090806.0+011953 & 137.025 & 1.331 & 0.66 & - & - & - & - & - & - \\ 
+7084 & 137.025 & 1.331 & 0.66 & - & - & - \\ 
 \hline
-885 & eFEDS J090913.9-001214 & 137.308 & -0.204 & 0.31 & $3.34^{+0.72}_{-0.63}$ & $2.99^{+0.52}_{-0.37}$ & $0.31^{+0.03}_{-0.02}$ & $0.84^{+0.09}_{-0.11}$ & $0.57^{+0.06}_{-0.05}$ & $1.45^{+0.12}_{-0.14}$ \\ 
+885 & 137.308 & -0.204 & 0.31 & $2.99^{+0.52}_{-0.37}$ & $5.65^{+0.49}_{-0.44}$ & $14.52^{+1.38}_{-1.55}$ \\ 
 \hline
-2004 & eFEDS J090915.4-010104 & 137.314 & -1.018 & 0.82 & $3.51^{+1.2}_{-0.67}$ & $5.57^{+4.09}_{-1.96}$ & $1.26^{+0.16}_{-0.18}$ & $3.42^{+0.98}_{-0.85}$ & $0.62^{+0.23}_{-0.35}$ & $2.11^{+1.01}_{-1.29}$ \\ 
+2004 & 137.314 & -1.018 & 0.82 & $5.57^{+4.09}_{-1.96}$ & $6.17^{+2.72}_{-3.36}$ & $21.12^{+10.09}_{-10.65}$ \\ 
 \hline
-3523 & eFEDS J090932.6-005020 & 137.386 & -0.839 & 1.13 & $5.91^{+2.3}_{-1.09}$ & $5.61^{+2.19}_{-1.11}$ & $1.89^{+0.19}_{-0.25}$ & $6.9^{+0.72}_{-1.43}$ & $2.63^{+0.31}_{-0.39}$ & $9.38^{+1.11}_{-2.4}$ \\ 
+3523 & 137.386 & -0.839 & 1.13 & $5.61^{+2.19}_{-1.11}$ & $26.33^{+2.91}_{-3.09}$ & $93.83^{+11.49}_{-17.28}$ \\ 
 \hline
-372 & eFEDS J091453.6+041613 & 138.723 & 4.27 & 0.14 & $2.95^{+0.72}_{-0.73}$ & $2.46^{+0.84}_{-0.67}$ & $0.15^{+0.01}_{-0.01}$ & $0.4^{+0.05}_{-0.05}$ & $0.19^{+0.01}_{-0.01}$ & $0.47^{+0.07}_{-0.04}$ \\ 
-\hline
-4253 & eFEDS J091512.3+043506 & 138.801 & 4.585 & 0.36 & $1.9^{+1.39}_{-0.4}$ & $5.18^{+-5.18}_{-3.76}$ & $0.08^{+0.02}_{-0.01}$ & $0.17^{+0.05}_{-0.04}$ & $0.12^{+0.02}_{-0.12}$ & $0.4^{+0.3}_{-0.09}$ \\ 
-\hline
-534 & eFEDS J091610.2-002348 & 139.042 & -0.397 & 0.32 & $6.05^{+0.49}_{-0.48}$ & $6.04^{+0.35}_{-0.35}$ & $0.66^{+0.02}_{-0.02}$ & $2.34^{+0.12}_{-0.13}$ & $1.39^{+0.03}_{-0.02}$ & $4.94^{+0.16}_{-0.16}$ \\ 
-\hline
-100 & eFEDS J092121.2+031726 & 140.338 & 3.291 & 0.33 & $8.0^{+0.36}_{-0.35}$ & $7.83^{+0.31}_{-0.31}$ & $1.32^{+0.02}_{-0.02}$ & $5.42^{+0.16}_{-0.13}$ & $1.97^{+0.02}_{-0.03}$ & $7.97^{+0.17}_{-0.19}$ \\ 
-\hline
-857 & eFEDS J092212.1-002731 & 140.55 & -0.459 & 0.32 & $6.54^{+0.29}_{-0.29}$ & $5.86^{+0.24}_{-0.23}$ & $0.54^{+0.01}_{-0.01}$ & $2.01^{+0.06}_{-0.06}$ & $0.95^{+0.01}_{-0.01}$ & $3.34^{+0.07}_{-0.08}$ \\ 
-\hline
-12565 & eFEDS J092953.6+002801 & 142.473 & 0.467 & 0.15 & $1.06^{+0.09}_{-0.13}$ & - & $0.02^{+0.0}_{-0.0}$ & $0.03^{+0.01}_{-0.01}$ & - & - \\ 
-\hline
-
 \end{tabular}
 \end{center}
 \end{table*}
 
+
+\begin{table*}
+\begin{center}
+\contcaption{{}}
+\vspace{1mm}
+\begin{tabular}{cccccccccc}
+\hline
+\hline
+eFEDS ID & RA & Dec & z & T$^{\rm{XGA}}_{\rm{x}, 500kpc}$ & L$^{\rm{XGA, 52}}_{\rm{x, 500kpc}}$ & L$^{\rm{XGA, bol}}_{\rm{x, 500kpc}}$\\
+\hline
+\hline
+372 & 138.723 & 4.27 & 0.14 & $2.46^{+0.84}_{-0.67}$ & $1.8^{+0.11}_{-0.09}$ & $4.35^{+0.5}_{-0.4}$ \\ 
+\hline
+4253 & 138.801 & 4.585 & 0.36 & $5.18^{+-5.18}_{-3.76}$ & $1.18^{+0.3}_{-1.18}$ & $3.96^{+5.96}_{-1.84}$ \\ 
+\hline
+534 & 139.042 & -0.397 & 0.32 & $6.04^{+0.35}_{-0.35}$ & $13.86^{+0.32}_{-0.34}$ & $49.42^{+1.96}_{-1.85}$ \\ 
+\hline
+100 & 140.338 & 3.291 & 0.33 & $7.83^{+0.31}_{-0.31}$ & $19.66^{+0.25}_{-0.23}$ & $79.71^{+0.85}_{-1.93}$ \\ 
+\hline
+857 & 140.55 & -0.459 & 0.32 & $5.86^{+0.24}_{-0.23}$ & $9.51^{+0.13}_{-0.11}$ & $33.41^{+0.66}_{-0.84}$ \\ 
+\hline
+12565 & 142.473 & 0.467 & 0.15 & - & - & - \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table*}
 
 
 % If you want to present additional material which would interrupt the flow of the main paper,
